@@ -1,0 +1,27 @@
+diff -up gnome-vfs-2.24.2/modules/file-method.c.stat-mvfs gnome-vfs-2.24.2/modules/file-method.c
+--- gnome-vfs-2.24.2/modules/file-method.c.stat-mvfs	2015-11-13 08:52:49.131342284 +0100
++++ gnome-vfs-2.24.2/modules/file-method.c	2015-11-13 08:56:52.645904421 +0100
+@@ -1271,6 +1271,7 @@ do_is_local (GnomeVFSMethod *method,
+ 		type = filesystem_type (path, path, &statbuf);
+ 		is_local = ((strcmp (type, "nfs") != 0) && 
+ 			    (strcmp (type, "afs") != 0) &&
++			    (strcmp (type, "mvfs") != 0) &&
+ 			    (strcmp (type, "autofs") != 0) &&
+ 			    (strcmp (type, "unknown") != 0) &&
+ 			    (strcmp (type, "novfs") != 0) &&
+diff -up gnome-vfs-2.16.2/modules/fstype.c.bak gnome-vfs-2.16.2/modules/fstype.c
+--- gnome-vfs-2.16.2/modules/fstype.c.bak	2006-04-25 11:46:28.000000000 +0200
++++ gnome-vfs-2.16.2/modules/fstype.c	2012-07-18 18:03:56.000000000 +0200
+@@ -273,6 +273,12 @@ filesystem_type_uncached (char *path, ch
+ 	continue;
+ #endif
+ 
++      if (strcmp (mnt->mnt_type, "mvfs") == 0)
++        {
++          type = mnt->mnt_type;
++          break;
++        }
++
+       /* Newer systems like SunOS 4.1 keep the dev number in the mtab,
+ 	 in the options string.	 For older systems, we need to stat the
+ 	 directory that the filesystem is mounted on to get it.

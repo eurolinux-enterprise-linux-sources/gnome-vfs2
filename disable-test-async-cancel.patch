@@ -1,0 +1,12 @@
+diff --git a/test/Makefile.am b/test/Makefile.am
+index a1aefa0..c18f2e4 100644
+--- a/test/Makefile.am
++++ b/test/Makefile.am
+@@ -62,7 +62,6 @@ TESTS_ENVIRONMENT = GNOME_VFS_MODULE_PATH=$(top_builddir)/modules/.libs \
+ 		SRCDIR=$(srcdir)
+ TESTS = test-acl	  \
+ 	test-address      \
+-	test-async-cancel \
+ 	test-escape       \
+ 	test-uri       	  \
+ 	$(srcdir)/auto-test	

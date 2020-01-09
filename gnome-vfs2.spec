@@ -14,7 +14,7 @@
 Summary: The GNOME virtual file-system libraries
 Name: gnome-vfs2
 Version: 2.24.2
-Release: 6%{?dist}
+Release: 8%{?dist}
 License: LGPLv2+ and GPLv2+
 # the daemon and the library are LGPLv2+
 # the modules are LGPLv2+ and GPLv2+ 
@@ -98,6 +98,13 @@ Patch404: gnome-vfs-2.24.xx-utf8-mounts.patch
 # https://bugzilla.gnome.org/show_bug.cgi?id=435653
 Patch405: 0001-Add-default-media-application-schema.patch
 
+# Do not stat every file on an ClearCase mvfs filesystem
+# https://bugzilla.redhat.com/show_bug.cgi?id=917810
+Patch406: gnome-vfs-2.16.2-stat-mvfs.patch
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=1296654
+Patch407: disable-test-async-cancel.patch
+
 
 %description
 GNOME VFS is the GNOME virtual file system. It is the foundation of
@@ -156,6 +163,10 @@ shares (SMB) to applications using GNOME VFS.
 
 %patch405 -p1 -b .default-media
 
+%patch406 -p1 -b .stat-mvfs
+
+%patch407 -p1 -b .disable-test-async-cancel
+
 # Convert non UTF-8 files
 mkdir -p __temp
 for f in AUTHORS ; do
@@ -165,9 +176,9 @@ for f in AUTHORS ; do
 done
 rm -rf __temp
 
-# for patch 10 and 4
-autoheader
-autoconf
+# for patch 10, 4 and 407
+gtkdocize
+autoreconf -fi
 
 %build
 
@@ -286,6 +297,12 @@ fi
 %config %{_sysconfdir}/gnome-vfs-2.0/modules/smb-module.conf
 
 %changelog
+* Fri Jan 15 2016 Ondrej Holy <oholy@redhat.com> - 2.24.2-8
+- Disable buggy async-cancel test (#1296654)
+
+* Fri Nov 13 2015 Ondrej Holy <oholy@redhat.com> - 2.24.2-7
+- Do not stat every file on an ClearCase mvfs filesystem (#917810)
+
 * Thu May 13 2010 Tomas Bzatek <tbzatek@redhat.com> - 2.24.2-6
 - Translation updates (#589209)
 
