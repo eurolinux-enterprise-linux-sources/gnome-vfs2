@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DNS Resolution</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.74.3">
+<link rel="home" href="index.html" title="GnomeVFS - Filesystem Abstraction library">
+<link rel="up" href="networking.html" title="Networking">
+<link rel="prev" href="gnome-vfs-2.0-gnome-vfs-dns-sd.html" title="Zeroconf networking support">
+<link rel="next" href="gnome-vfs-2.0-gnome-vfs-ssl.html" title="SSL support functions">
+<meta name="generator" content="GTK-Doc V1.12 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="about.html" title="Introduction to GnomeVFS">
+<link rel="chapter" href="data-types.html" title="Basic Data Types">
+<link rel="chapter" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="chapter" href="gnome-vfs-directory-ops.html" title="Directory-Specific Operations">
+<link rel="chapter" href="gnome-vfs-file-and-dirs-ops.html" title="Advanced File/Directory Operations">
+<link rel="chapter" href="gnome-vfs-file-async-ops.html" title="Asynchronous Operations">
+<link rel="chapter" href="volumes.html" title="Volumes and Drives Handling">
+<link rel="chapter" href="networking.html" title="Networking">
+<link rel="chapter" href="mime-registry.html" title="MIME Registry">
+<link rel="chapter" href="modules.html" title="Filesystem Modules">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gnome-vfs-2.0-gnome-vfs-dns-sd.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="networking.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GnomeVFS - Filesystem Abstraction library</th>
+<td><a accesskey="n" href="gnome-vfs-2.0-gnome-vfs-ssl.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gnome-vfs-2.0-gnome-vfs-resolve.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gnome-vfs-2.0-gnome-vfs-resolve.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-resolve"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnome-vfs-2.0-gnome-vfs-resolve.top_of_page"></a>DNS Resolution</span></h2>
+<p>DNS Resolution — Generic thread-safe address resolution functions.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gnome-vfs-2.0-gnome-vfs-resolve.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve" title="gnome_vfs_resolve ()">gnome_vfs_resolve</a>                   (const char *hostname,
+                                                         GnomeVFSResolveHandle **handle);
+void                <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve-free" title="gnome_vfs_resolve_free ()">gnome_vfs_resolve_free</a>              (GnomeVFSResolveHandle *handle);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve-next-address" title="gnome_vfs_resolve_next_address ()">gnome_vfs_resolve_next_address</a>      (GnomeVFSResolveHandle *handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> **address);
+void                <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve-reset-to-beginning" title="gnome_vfs_resolve_reset_to_beginning ()">gnome_vfs_resolve_reset_to_beginning</a>
+                                                        (GnomeVFSResolveHandle *handle);
+                    <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a>;
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-dup" title="gnome_vfs_address_dup ()">gnome_vfs_address_dup</a>               (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);
+void                <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-free" title="gnome_vfs_address_free ()">gnome_vfs_address_free</a>              (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);
+int                 <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-get-family-type" title="gnome_vfs_address_get_family_type ()">gnome_vfs_address_get_family_type</a>   (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32">guint32</a>             <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-get-ipv4" title="gnome_vfs_address_get_ipv4 ()">gnome_vfs_address_get_ipv4</a>          (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);
+<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType">GType</a>               <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-get-type" title="gnome_vfs_address_get_type ()">gnome_vfs_address_get_type</a>          (void);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-new-from-ipv4" title="gnome_vfs_address_new_from_ipv4 ()">gnome_vfs_address_new_from_ipv4</a>     (<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> ipv4_address);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-new-from-sockaddr" title="gnome_vfs_address_new_from_sockaddr ()">gnome_vfs_address_new_from_sockaddr</a> (struct sockaddr *sa,
+                                                         int len);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-new-from-string" title="gnome_vfs_address_new_from_string ()">gnome_vfs_address_new_from_string</a>   (const char *address);
+char *              <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-address-to-string" title="gnome_vfs_address_to_string ()">gnome_vfs_address_to_string</a>         (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-resolve.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-resolve.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-resolve"></a><h3>gnome_vfs_resolve ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_resolve                   (const char *hostname,
+                                                         GnomeVFSResolveHandle **handle);</pre>
+<p>
+Tries to resolve <em class="parameter"><code>hostname</code></em>. If the operation was successful you can
+get the resolved addresses in form of <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> by calling
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve-next-address" title="gnome_vfs_resolve_next_address ()"><code class="function">gnome_vfs_resolve_next_address()</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>hostname</code></em> :</span></p></td>
+<td> hostname you want to resolve.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a pointer to a <span class="type">GnomeVFSResolveHandle.</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult"><span class="type">GnomeVFSResult</span></a> indicating the success of the operation.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-resolve-free"></a><h3>gnome_vfs_resolve_free ()</h3>
+<pre class="programlisting">void                gnome_vfs_resolve_free              (GnomeVFSResolveHandle *handle);</pre>
+<p>
+Use this function to free a <span class="type">GnomeVFSResolveHandle</span> returned by
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve" title="gnome_vfs_resolve ()"><code class="function">gnome_vfs_resolve()</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> a <span class="type">GnomeVFSResolveHandle.</span>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-resolve-next-address"></a><h3>gnome_vfs_resolve_next_address ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            gnome_vfs_resolve_next_address      (GnomeVFSResolveHandle *handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> **address);</pre>
+<p>
+Stores the next <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> available in <em class="parameter"><code>handle</code></em> of the
+former lookup in <em class="parameter"><code>address</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> a <span class="type">GnomeVFSResolveHandle.</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> a pointer to a pointer to a <span class="type">GnomeVFSAddress.</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if the next address was stored in <em class="parameter"><code>address</code></em> or
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if no other address is available.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-resolve-reset-to-beginning"></a><h3>gnome_vfs_resolve_reset_to_beginning ()</h3>
+<pre class="programlisting">void                gnome_vfs_resolve_reset_to_beginning
+                                                        (GnomeVFSResolveHandle *handle);</pre>
+<p>
+Reset <em class="parameter"><code>handle</code></em> so that a following call to <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#gnome-vfs-resolve-next-address" title="gnome_vfs_resolve_next_address ()"><code class="function">gnome_vfs_resolve_next_address()</code></a>
+will return the first resolved address.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> a <span class="type">GnomeVFSResolveHandle.</span>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GnomeVFSAddress"></a><h3>GnomeVFSAddress</h3>
+<pre class="programlisting">typedef struct _GnomeVFSAddress GnomeVFSAddress;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-dup"></a><h3>gnome_vfs_address_dup ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   gnome_vfs_address_dup               (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);</pre>
+<p>
+Duplicates <em class="parameter"><code>address</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A <span class="type">GnomeVFSAddress.</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> Duplicated <em class="parameter"><code>address</code></em> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>address</code></em> was not valid.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-free"></a><h3>gnome_vfs_address_free ()</h3>
+<pre class="programlisting">void                gnome_vfs_address_free              (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);</pre>
+<p>
+Frees the memory allocated for <em class="parameter"><code>address</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A <span class="type">GnomeVFSAddress.</span>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-get-family-type"></a><h3>gnome_vfs_address_get_family_type ()</h3>
+<pre class="programlisting">int                 gnome_vfs_address_get_family_type   (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);</pre>
+<p>
+Use this function to retrive the address family of <em class="parameter"><code>address</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A pointer to a <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The address family of <em class="parameter"><code>address</code></em>.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-get-ipv4"></a><h3>gnome_vfs_address_get_ipv4 ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32">guint32</a>             gnome_vfs_address_get_ipv4          (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A <span class="type">GnomeVFSAddress.</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The associated IPv4 address in network byte order.
+
+Note that you should avoid using this function because newly written
+code should be protocol independent.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-get-type"></a><h3>gnome_vfs_address_get_type ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType">GType</a>               gnome_vfs_address_get_type          (void);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-new-from-ipv4"></a><h3>gnome_vfs_address_new_from_ipv4 ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   gnome_vfs_address_new_from_ipv4     (<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> ipv4_address);</pre>
+<p>
+Creates a new <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> from <em class="parameter"><code>ipv4_address</code></em>.
+</p>
+<p>
+Note that this function should be avoided because newly written
+code should be protocol independent.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>ipv4_address</code></em> :</span></p></td>
+<td> A IPv4 Address in network byte order
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A new <span class="type">GnomeVFSAdress.</span>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-new-from-sockaddr"></a><h3>gnome_vfs_address_new_from_sockaddr ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   gnome_vfs_address_new_from_sockaddr (struct sockaddr *sa,
+                                                         int len);</pre>
+<p>
+Creates a new <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> from <em class="parameter"><code>sa</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>sa</code></em> :</span></p></td>
+<td> A pointer to a sockaddr.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>len</code></em> :</span></p></td>
+<td> The size of <em class="parameter"><code>sa</code></em>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The new <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> 
+or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if <em class="parameter"><code>sa</code></em> was invalid or the address family isn't supported.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-new-from-string"></a><h3>gnome_vfs_address_new_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *   gnome_vfs_address_new_from_string   (const char *address);</pre>
+<p>
+Creates a new <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a> from the given string or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>
+if <em class="parameter"><code>address</code></em> isn't a valid.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A string representation of the address.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The new <span class="type">GnomeVFSAddress.</span>
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-address-to-string"></a><h3>gnome_vfs_address_to_string ()</h3>
+<pre class="programlisting">char *              gnome_vfs_address_to_string         (<a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress">GnomeVFSAddress</a> *address);</pre>
+<p>
+Translate <em class="parameter"><code>address</code></em> to a printable string.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>address</code></em> :</span></p></td>
+<td> A pointer to a <a class="link" href="gnome-vfs-2.0-gnome-vfs-resolve.html#GnomeVFSAddress" title="GnomeVFSAddress"><span class="type">GnomeVFSAddress</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A newly alloced string representation of <em class="parameter"><code>address</code></em> which
+the caller must free.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.8</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.12</div>
+</body>
+</html>

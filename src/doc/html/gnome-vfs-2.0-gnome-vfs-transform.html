@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>gnome-vfs-transform</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.74.3">
+<link rel="home" href="index.html" title="GnomeVFS - Filesystem Abstraction library">
+<link rel="up" href="modules.html" title="Filesystem Modules">
+<link rel="prev" href="gnome-vfs-2.0-gnome-vfs-context.html" title="GnomeVFSContext">
+<link rel="next" href="gnome-vfs-2.0-gnome-vfs-parse-ls.html" title="gnome-vfs-parse-ls">
+<meta name="generator" content="GTK-Doc V1.12 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="about.html" title="Introduction to GnomeVFS">
+<link rel="chapter" href="data-types.html" title="Basic Data Types">
+<link rel="chapter" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="chapter" href="gnome-vfs-directory-ops.html" title="Directory-Specific Operations">
+<link rel="chapter" href="gnome-vfs-file-and-dirs-ops.html" title="Advanced File/Directory Operations">
+<link rel="chapter" href="gnome-vfs-file-async-ops.html" title="Asynchronous Operations">
+<link rel="chapter" href="volumes.html" title="Volumes and Drives Handling">
+<link rel="chapter" href="networking.html" title="Networking">
+<link rel="chapter" href="mime-registry.html" title="MIME Registry">
+<link rel="chapter" href="modules.html" title="Filesystem Modules">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gnome-vfs-2.0-gnome-vfs-context.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="modules.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GnomeVFS - Filesystem Abstraction library</th>
+<td><a accesskey="n" href="gnome-vfs-2.0-gnome-vfs-parse-ls.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gnome-vfs-2.0-gnome-vfs-transform.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gnome-vfs-2.0-gnome-vfs-transform.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-transform"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnome-vfs-2.0-gnome-vfs-transform.top_of_page"></a>gnome-vfs-transform</span></h2>
+<p>gnome-vfs-transform</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gnome-vfs-2.0-gnome-vfs-transform.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-method.html#GnomeVFSTransform" title="GnomeVFSTransform">GnomeVFSTransform</a> * (<a class="link" href="gnome-vfs-2.0-gnome-vfs-transform.html#GnomeVFSTransformInitFunc" title="GnomeVFSTransformInitFunc ()">*GnomeVFSTransformInitFunc</a>)        (const char *method_name,
+                                                         const char *config_args);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      (<a class="link" href="gnome-vfs-2.0-gnome-vfs-transform.html#GnomeVFSTransformFunc" title="GnomeVFSTransformFunc ()">*GnomeVFSTransformFunc</a>)            (<a class="link" href="gnome-vfs-2.0-gnome-vfs-method.html#GnomeVFSTransform" title="GnomeVFSTransform">GnomeVFSTransform</a> *transform,
+                                                         const char *old_uri,
+                                                         char **new_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-async-ops.html#GnomeVFSContext" title="GnomeVFSContext">GnomeVFSContext</a> *context);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-transform.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-transform.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GnomeVFSTransformInitFunc"></a><h3>GnomeVFSTransformInitFunc ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-method.html#GnomeVFSTransform" title="GnomeVFSTransform">GnomeVFSTransform</a> * (*GnomeVFSTransformInitFunc)        (const char *method_name,
+                                                         const char *config_args);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>method_name</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>config_args</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GnomeVFSTransformFunc"></a><h3>GnomeVFSTransformFunc ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      (*GnomeVFSTransformFunc)            (<a class="link" href="gnome-vfs-2.0-gnome-vfs-method.html#GnomeVFSTransform" title="GnomeVFSTransform">GnomeVFSTransform</a> *transform,
+                                                         const char *old_uri,
+                                                         char **new_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-async-ops.html#GnomeVFSContext" title="GnomeVFSContext">GnomeVFSContext</a> *context);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>transform</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_uri</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_uri</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>context</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.12</div>
+</body>
+</html>

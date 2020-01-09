@@ -1,0 +1,1529 @@
+# translation of gnome-vfs.master.po to catalan
+# gnome-vfs translation to Catalan.
+# Copyright (C) 2000, 2001, 2002, 2003, 2005, 2006, 2009 The Free Software Foundation, Inc.
+#
+# Softcatalà <info@softcatala.org>, 2000, 2001.
+# Jordi Mallach <jordi@sindominio.net>, 2002-2006.
+# Xavier Conde Rueda <xavi.conde@gmail.com>, 2006.
+# Carles Ferrando Garcia <carles.ferrando@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-vfs.master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-08-07 18:46+0200\n"
+"PO-Revision-Date: 2009-08-04 09:28+0200\n"
+"Last-Translator: Carles Ferrando Garcia <carles.ferrando@gmail.com>\n"
+"Language-Team: catalan <tradgnome@softcatala.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: ../libgnomevfs/gnome-vfs-cdrom.c:237
+msgid "ISO 9660 Volume"
+msgstr "Volum ISO 9660"
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:225
+#, c-format
+msgid "%s:%u contains NUL characters."
+msgstr "%s:%u conté caràcters NUL."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:242
+#, c-format
+msgid "%s:%u contains no method name."
+msgstr "%s:%u no conté cap nom de mètode."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:282
+#, c-format
+msgid "%s:%u has no options endmarker."
+msgstr "%s:%u no té un marcador final d'opcions."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:293
+#, c-format
+msgid "%s:%u has unknown options %s."
+msgstr "%s:%u té opcions desconegudes %s."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:312
+#, c-format
+msgid "%s:%u contains no module name."
+msgstr "%s:%u no conté cap nom de mòdul."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:363
+#, c-format
+msgid "Configuration file `%s' was not found: %s"
+msgstr "El fitxer de configuració `%s' no ha estat trobat: %s"
+
+#. stop parsing if we failed
+#: ../libgnomevfs/gnome-vfs-configuration.c:382
+#, c-format
+msgid "%s:%d aborted parsing."
+msgstr "%s:%d s'ha cancel·lat l'anàlisi."
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:39
+msgid "AFFS Volume"
+msgstr "Volum AFFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:40
+msgid "AFS Network Volume"
+msgstr "Volum de xarxa AFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:41
+msgid "Auto-detected Volume"
+msgstr "Volum autodetectat"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:42
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:44
+msgid "CD-ROM Drive"
+msgstr "Unitat de CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:43
+msgid "CD Digital Audio"
+msgstr "Àudio digital de CD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:45
+msgid "Hardware Device Volume"
+msgstr "Volum de dispositiu de maquinari"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:46
+msgid "EncFS Volume"
+msgstr "Volum d'EncFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:47
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:48
+msgid "Ext2 Linux Volume"
+msgstr "Volum d'Ext2 Linux"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:49
+msgid "Ext3 Linux Volume"
+msgstr "Volum d'Ext3 Linux"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:50
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:64
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:65
+msgid "MSDOS Volume"
+msgstr "Volum d'MSDOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:51
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:60
+msgid "BSD Volume"
+msgstr "Volum de BSD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:52
+msgid "FUSE Volume"
+msgstr "Volum de FUSE"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:53
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:54
+msgid "MacOS Volume"
+msgstr "Volum del MacOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:55
+msgid "CDROM Volume"
+msgstr "Volum de CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:56
+msgid "Hsfs CDROM Volume"
+msgstr "Volum de CD-ROM Hsfs"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:57
+msgid "JFS Volume"
+msgstr "Volum de JFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:58
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:67
+msgid "Windows NT Volume"
+msgstr "Volum de Windows NT"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:59
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:61
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:69
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:70
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:71
+msgid "System Volume"
+msgstr "Volum del sistema"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:62
+msgid "Memory Volume"
+msgstr "Volum de memòria"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:63
+msgid "Minix Volume"
+msgstr "Volum de Minix"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:66
+msgid "NFS Network Volume"
+msgstr "Volum de xarxa NFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:68
+msgid "Netware Volume"
+msgstr "Volum de Netware"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:72
+msgid "Reiser4 Linux Volume"
+msgstr "Volum de Linux Reiser4"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:73
+msgid "ReiserFS Linux Volume"
+msgstr "Volum de Linux ReiserFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:74
+msgid "Windows Shared Volume"
+msgstr "Volum compartit de Windows"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:75
+msgid "SuperMount Volume"
+msgstr "Volum de Supermount"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:76
+msgid "DVD Volume"
+msgstr "Volum de DVD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:77
+msgid "Solaris/BSD Volume"
+msgstr "Volum de Solaris/BSD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:78
+msgid "Udfs Solaris Volume"
+msgstr "Volum Udfs de Solaris"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:79
+msgid "Pcfs Solaris Volume"
+msgstr "Volum Pcfs de Solaris"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:80
+msgid "Sun SAM-QFS Volume"
+msgstr "Volum SAM-QFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:81
+msgid "Temporary Volume"
+msgstr "Volum temporal"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:82
+msgid "Enhanced DOS Volume"
+msgstr "Volum millorat de DOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:83
+msgid "Windows VFAT Volume"
+msgstr "Volum VFAT de Windows"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:84
+msgid "Xenix Volume"
+msgstr "Volum de Xenix"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:85
+msgid "XFS Linux Volume"
+msgstr "Volum XFS de Linux"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:86
+msgid "XIAFS Volume"
+msgstr "Volum de XIAFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:87
+msgid "CIFS Volume"
+msgstr "Volum de CIFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:115
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:356
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:582
+#, c-format
+msgid "%s Volume"
+msgstr "Volum de %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:372
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:565
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:623
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:374
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:567
+msgid "CD-R"
+msgstr "CD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:376
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:568
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:380
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:569
+msgid "DVD-ROM"
+msgstr "DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:382
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:384
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:386
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:571
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:388
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:572
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:390
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:570
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:393
+msgid "DVD±R"
+msgstr "DVD±R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:396
+msgid "DVD±RW"
+msgstr "DVD±RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:399
+#, c-format
+msgid "%s/%s Drive"
+msgstr "Unitat %s/%s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:401
+#, c-format
+msgid "%s Drive"
+msgstr "Unitat %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:406
+msgid "Floppy Drive"
+msgstr "Unitat de disquet"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:409
+msgid "Compact Flash Drive"
+msgstr "Unitat Compact Flash"
+
+# No tradueixo Memory Stick pq crec que és el producte concret, no una "memòria portàtil"
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:411
+msgid "Memory Stick Drive"
+msgstr "Unitat Memory Stick"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:413
+msgid "Smart Media Drive"
+msgstr "Unitat Smart Media"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:415
+msgid "SD/MMC Drive"
+msgstr "Unitat SD/MMC"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:417
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:594
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:626
+msgid "Zip Drive"
+msgstr "Unitat Zip"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:420
+msgid "Jaz Drive"
+msgstr "Unitat Jaz"
+
+# "pen drive" -> "llapis de memòria" (termcat) /josep
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:423
+msgid "Pen Drive"
+msgstr "Unitat de memòria portàtil"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:429
+#, c-format
+msgid "%s %s Music Player"
+msgstr "Reproductor de música %s %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:437
+#, c-format
+msgid "%s %s Digital Camera"
+msgstr "Càmera digital %s %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:467
+msgid "Drive"
+msgstr "Unitat"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:472
+#, c-format
+msgid "External %s"
+msgstr "%s extern"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:508
+msgid "CD-ROM Disc"
+msgstr "Disc CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:513
+msgid "Blank CD-R Disc"
+msgstr "Disc CD-R en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:515
+msgid "CD-R Disc"
+msgstr "Disc CD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:520
+msgid "Blank CD-RW Disc"
+msgstr "Disc CD-RW en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:522
+msgid "CD-RW Disc"
+msgstr "Disc CD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:526
+msgid "DVD-ROM Disc"
+msgstr "Disc DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:531
+msgid "Blank DVD-RAM Disc"
+msgstr "Disc DVD-RAM en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:533
+msgid "DVD-RAM Disc"
+msgstr "Disc DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:538
+msgid "Blank DVD-R Disc"
+msgstr "Disc DVD-R en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:540
+msgid "DVD-R Disc"
+msgstr "Disc DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:545
+msgid "Blank DVD-RW Disc"
+msgstr "Disc DVD-RW en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:547
+msgid "DVD-RW Disc"
+msgstr "Disc DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:553
+msgid "Blank DVD+R Disc"
+msgstr "Disc DVD+R en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:555
+msgid "DVD+R Disc"
+msgstr "Disc DVD+R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:560
+msgid "Blank DVD+RW Disc"
+msgstr "Disc DVD+RW en blanc"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:562
+msgid "DVD+RW Disc"
+msgstr "Disc DVD+RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:569
+msgid "Audio Disc"
+msgstr "Disc d'àudio"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:580
+#, c-format
+msgid "%s Removable Volume"
+msgstr "Volum extraïble %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:591
+msgid "Volume"
+msgstr "Volum"
+
+#: ../libgnomevfs/gnome-vfs-job.c:733
+#, c-format
+msgid "Unknown operation type %u"
+msgstr "No es coneix el tipus d'operació %u"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1024 ../libgnomevfs/gnome-vfs-job.c:1175
+#, c-format
+msgid "Cannot create pipe for open GIOChannel: %s"
+msgstr "No es pot crear la connexió per obrir GIOChannel: %s"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1691
+#, c-format
+msgid "Unknown job kind %u"
+msgstr "No es coneix el tipus de treball %u"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1724
+msgid "Operation stopped"
+msgstr "Operació aturada"
+
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:103
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:231
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:282
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:365
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:386
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:406
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:427
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:448
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:541
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:565
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:586
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:607
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:628
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:647
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:666
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:686
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:706
+#: ../libgnomevfs/gnome-vfs-mime-info.c:631
+#: ../libgnomevfs/gnome-vfs-mime-info.c:638
+#: ../libgnomevfs/gnome-vfs-mime-info.c:646
+#: ../libgnomevfs/gnome-vfs-mime-info.c:653
+#: ../libgnomevfs/gnome-vfs-mime-info.c:661
+#: ../libgnomevfs/gnome-vfs-mime-info.c:678
+#: ../libgnomevfs/gnome-vfs-mime-info.c:685
+#: ../libgnomevfs/gnome-vfs-mime-info.c:692
+#: ../libgnomevfs/gnome-vfs-mime-info.c:699
+#: ../libgnomevfs/gnome-vfs-mime-info.c:707
+#: ../libgnomevfs/gnome-vfs-mime-info.c:714
+msgid ""
+"Deprecated function.  User modifications to the MIME database are no longer "
+"supported."
+msgstr ""
+"La funció està desaconsellada. Ja no es permeten les modificacions d'usuari "
+"a la base de dades MIME."
+
+#: ../libgnomevfs/gnome-vfs-parse-ls.c:713
+#, c-format
+msgid "Could not parse: %s"
+msgstr "No s'ha pogut analitzar: %s"
+
+#: ../libgnomevfs/gnome-vfs-parse-ls.c:715
+msgid "More parsing errors will be ignored."
+msgstr "S'ignoraran els següents errors d'anàlisi."
+
+#. GNOME_VFS_OK
+#: ../libgnomevfs/gnome-vfs-result.c:47
+msgid "No error"
+msgstr "Cap error"
+
+#. GNOME_VFS_ERROR_NOT_FOUND
+#: ../libgnomevfs/gnome-vfs-result.c:48
+msgid "File not found"
+msgstr "Fitxer no trobat"
+
+#. GNOME_VFS_ERROR_GENERIC
+#: ../libgnomevfs/gnome-vfs-result.c:49
+msgid "Generic error"
+msgstr "Error genèric"
+
+#. GNOME_VFS_ERROR_INTERNAL
+#: ../libgnomevfs/gnome-vfs-result.c:50
+msgid "Internal error"
+msgstr "Error intern"
+
+#. GNOME_VFS_ERROR_BAD_PARAMETERS
+#: ../libgnomevfs/gnome-vfs-result.c:51
+msgid "Invalid parameters"
+msgstr "Paràmetres no vàlids"
+
+#. GNOME_VFS_ERROR_NOT_SUPPORTED
+#: ../libgnomevfs/gnome-vfs-result.c:52
+msgid "Unsupported operation"
+msgstr "Operació no implementada"
+
+#. GNOME_VFS_ERROR_IO
+#: ../libgnomevfs/gnome-vfs-result.c:53
+msgid "I/O error"
+msgstr "Error E/S"
+
+#. GNOME_VFS_ERROR_CORRUPTED_DATA
+#: ../libgnomevfs/gnome-vfs-result.c:54
+msgid "Data corrupted"
+msgstr "Dades corruptes"
+
+#. GNOME_VFS_ERROR_WRONG_FORMAT
+#: ../libgnomevfs/gnome-vfs-result.c:55
+msgid "Format not valid"
+msgstr "Format no vàlid"
+
+#. GNOME_VFS_ERROR_BAD_FILE
+#: ../libgnomevfs/gnome-vfs-result.c:56
+msgid "Bad file handle"
+msgstr "Fitxer associat incorrecte"
+
+#. GNOME_VFS_ERROR_TOO_BIG
+#: ../libgnomevfs/gnome-vfs-result.c:57
+msgid "File too big"
+msgstr "Fitxer massa gran"
+
+#. GNOME_VFS_ERROR_NO_SPACE
+#: ../libgnomevfs/gnome-vfs-result.c:58
+msgid "No space left on device"
+msgstr "No hi ha prou espai en el dispositiu"
+
+#. GNOME_VFS_ERROR_READ_ONLY
+#: ../libgnomevfs/gnome-vfs-result.c:59
+msgid "Read-only file system"
+msgstr "Sistema de fitxers de només lectura"
+
+#. GNOME_VFS_ERROR_INVALID_URI
+#: ../libgnomevfs/gnome-vfs-result.c:60
+msgid "Invalid URI"
+msgstr "URI no vàlid"
+
+#. GNOME_VFS_ERROR_NOT_OPEN
+#: ../libgnomevfs/gnome-vfs-result.c:61
+msgid "File not open"
+msgstr "Fitxer no obert"
+
+#. GNOME_VFS_ERROR_INVALID_OPEN_MODE
+#: ../libgnomevfs/gnome-vfs-result.c:62
+msgid "Open mode not valid"
+msgstr "El mode d'obertura no és vàlid"
+
+#. GNOME_VFS_ERROR_ACCESS_DENIED
+#: ../libgnomevfs/gnome-vfs-result.c:63
+msgid "Access denied"
+msgstr "Accés denegat"
+
+#. GNOME_VFS_ERROR_TOO_MANY_OPEN_FILES
+#: ../libgnomevfs/gnome-vfs-result.c:64
+msgid "Too many open files"
+msgstr "Massa fitxers oberts"
+
+#. GNOME_VFS_ERROR_EOF
+#: ../libgnomevfs/gnome-vfs-result.c:65
+msgid "End of file"
+msgstr "Fi del fitxer"
+
+#. GNOME_VFS_ERROR_NOT_A_DIRECTORY
+#: ../libgnomevfs/gnome-vfs-result.c:66
+msgid "Not a directory"
+msgstr "No és un directori"
+
+#. GNOME_VFS_ERROR_IN_PROGRESS
+#: ../libgnomevfs/gnome-vfs-result.c:67
+msgid "Operation in progress"
+msgstr "Operació en progrés"
+
+#. GNOME_VFS_ERROR_INTERRUPTED
+#: ../libgnomevfs/gnome-vfs-result.c:68
+msgid "Operation interrupted"
+msgstr "Operació interrompuda"
+
+#. GNOME_VFS_ERROR_FILE_EXISTS
+#: ../libgnomevfs/gnome-vfs-result.c:69
+msgid "File exists"
+msgstr "El fitxer ja existeix"
+
+#. GNOME_VFS_ERROR_LOOP
+#: ../libgnomevfs/gnome-vfs-result.c:70
+msgid "Looping links encountered"
+msgstr "S'han trobat enllaços amb bucles"
+
+#. GNOME_VFS_ERROR_NOT_PERMITTED
+#: ../libgnomevfs/gnome-vfs-result.c:71
+msgid "Operation not permitted"
+msgstr "La operació no es permet"
+
+#. GNOME_VFS_ERROR_IS_DIRECTORY
+#: ../libgnomevfs/gnome-vfs-result.c:72
+msgid "Is a directory"
+msgstr "És un directori"
+
+#. GNOME_VFS_ERROR_NO_MEMORY
+#: ../libgnomevfs/gnome-vfs-result.c:73
+msgid "Not enough memory"
+msgstr "No hi ha prou memòria"
+
+#. GNOME_VFS_ERROR_HOST_NOT_FOUND
+#: ../libgnomevfs/gnome-vfs-result.c:74
+msgid "Host not found"
+msgstr "No s'ha trobat el servidor"
+
+#. GNOME_VFS_ERROR_INVALID_HOST_NAME
+#: ../libgnomevfs/gnome-vfs-result.c:75
+msgid "Host name not valid"
+msgstr "El nom de servidor no és vàlid"
+
+#. GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS
+#: ../libgnomevfs/gnome-vfs-result.c:76
+msgid "Host has no address"
+msgstr "El servidor no té adreça"
+
+#. GNOME_VFS_ERROR_LOGIN_FAILED
+#: ../libgnomevfs/gnome-vfs-result.c:77
+msgid "Login failed"
+msgstr "Ha fallat l'entrada"
+
+#. GNOME_VFS_ERROR_CANCELLED
+#: ../libgnomevfs/gnome-vfs-result.c:78
+msgid "Operation cancelled"
+msgstr "S'ha cancel·lat la operació"
+
+#. GNOME_VFS_ERROR_DIRECTORY_BUSY
+#: ../libgnomevfs/gnome-vfs-result.c:79
+msgid "Directory busy"
+msgstr "Directori ocupat"
+
+#. GNOME_VFS_ERROR_DIRECTORY_NOT_EMPTY
+#: ../libgnomevfs/gnome-vfs-result.c:80
+msgid "Directory not empty"
+msgstr "El directori no és buit"
+
+#. GNOME_VFS_ERROR_TOO_MANY_LINKS
+#: ../libgnomevfs/gnome-vfs-result.c:81
+msgid "Too many links"
+msgstr "Hi ha massa enllaços"
+
+#. GNOME_VFS_ERROR_READ_ONLY_FILE_SYSTEM
+#: ../libgnomevfs/gnome-vfs-result.c:82
+msgid "Read only file system"
+msgstr "El sistema de fitxers és de només lectura"
+
+#. GNOME_VFS_ERROR_NOT_SAME_FILE_SYSTEM
+#: ../libgnomevfs/gnome-vfs-result.c:83
+msgid "Not on the same file system"
+msgstr "No és del mateix sistema de fitxers"
+
+#. GNOME_VFS_ERROR_NAME_TOO_LONG
+#: ../libgnomevfs/gnome-vfs-result.c:84
+msgid "Name too long"
+msgstr "Nom massa llarg"
+
+#. GNOME_VFS_ERROR_SERVICE_NOT_AVAILABLE
+#: ../libgnomevfs/gnome-vfs-result.c:85
+msgid "Service not available"
+msgstr "El servei no està disponible"
+
+#. GNOME_VFS_ERROR_SERVICE_OBSOLETE
+#: ../libgnomevfs/gnome-vfs-result.c:86
+msgid "Request obsoletes service's data"
+msgstr "Sol·licita les dades de serveis obsolets"
+
+#. GNOME_VFS_ERROR_PROTOCOL_ERROR
+#: ../libgnomevfs/gnome-vfs-result.c:87
+msgid "Protocol error"
+msgstr "Error de protocol"
+
+#. GNOME_VFS_ERROR_NO_MASTER_BROWSER
+#: ../libgnomevfs/gnome-vfs-result.c:88
+msgid "Could not find master browser"
+msgstr "No s'ha trobat el navegador mestre"
+
+#. GNOME_VFS_ERROR_NO_DEFAULT
+#: ../libgnomevfs/gnome-vfs-result.c:89
+msgid "No default action associated"
+msgstr "No hi ha cap acció per defecte associada"
+
+#. GNOME_VFS_ERROR_NO_HANDLER
+#: ../libgnomevfs/gnome-vfs-result.c:90
+msgid "No handler for URL scheme"
+msgstr "No hi ha cap gestor per l'esquema d'URL"
+
+#. GNOME_VFS_ERROR_PARSE
+#: ../libgnomevfs/gnome-vfs-result.c:91
+msgid "Error parsing command line"
+msgstr "S'ha produït un error en analitzar la línia d'ordes"
+
+#. GNOME_VFS_ERROR_LAUNCH
+#: ../libgnomevfs/gnome-vfs-result.c:92
+msgid "Error launching command"
+msgstr "S'ha produït un error en executar l'orde"
+
+#. GNOME_VFS_ERROR_TIMEOUT
+#: ../libgnomevfs/gnome-vfs-result.c:93
+msgid "Timeout reached"
+msgstr "S'ha esgotat el temps d'espera"
+
+#. GNOME_VFS_ERROR_NAMESERVER
+#: ../libgnomevfs/gnome-vfs-result.c:94
+msgid "Nameserver error"
+msgstr "Error del servidor de noms"
+
+#. GNOME_VFS_ERROR_LOCKED
+#: ../libgnomevfs/gnome-vfs-result.c:95
+msgid "The resource is locked"
+msgstr "El recurs és blocat"
+
+#. GNOME_VFS_ERROR_DEPRECATED_FUNCTION
+#: ../libgnomevfs/gnome-vfs-result.c:96
+msgid "Function call deprecated"
+msgstr "La crida a la funció està desaconsellada"
+
+#. GNOME_VFS_ERROR_INVALID_FILENAME
+#: ../libgnomevfs/gnome-vfs-result.c:97
+msgid "Invalid filename"
+msgstr "El nom del fitxer no és vàlid"
+
+#. GNOME_VFS_ERROR_NOT_A_SYMBOLIC_LINK
+#: ../libgnomevfs/gnome-vfs-result.c:98
+msgid "Not a symbolic link"
+msgstr "No és un enllaç simbòlic"
+
+#: ../libgnomevfs/gnome-vfs-result.c:225
+msgid "Unknown error"
+msgstr "Error desconegut"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:78
+#, c-format
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "%u byte"
+msgstr[1] "%u octets"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:84
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:88
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:92
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:1108
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:382
+msgid " (invalid Unicode)"
+msgstr " (Unicode invàlid)"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:564
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:620
+msgid "Floppy"
+msgstr "Disquet"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:573
+msgid "CD-ROM/DVD-ROM"
+msgstr "CD-ROM/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:574
+msgid "CD-ROM/DVD-RAM"
+msgstr "CD-ROM/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:575
+msgid "CD-ROM/DVD-R"
+msgstr "CD-ROM/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:576
+msgid "CD-ROM/DVD-RW"
+msgstr "CD-ROM/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:577
+msgid "CD-R/DVD-ROM"
+msgstr "CD-ROM/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:578
+msgid "CD-R/DVD-RAM"
+msgstr "CD-R/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:579
+msgid "CD-R/DVD-R"
+msgstr "CD-R/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:580
+msgid "CD-R/DVD-RW"
+msgstr "CD-R/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:581
+msgid "CD-RW/DVD-ROM"
+msgstr "CD-RW/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:582
+msgid "CD-RW/DVD-RAM"
+msgstr "CD-RW/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:583
+msgid "CD-RW/DVD-R"
+msgstr "CD-RW/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:584
+msgid "CD-RW/DVD-RW"
+msgstr "CD-RW/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:586
+msgid "Disk"
+msgstr "Disc"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:587
+msgid "USB Drive"
+msgstr "Unitat USB"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:588
+msgid "IEEE1394 Drive"
+msgstr "Unitat IEEE1394"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:589
+msgid "CF"
+msgstr "CF"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:590
+msgid "SD/MMC"
+msgstr "SD/MMC"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:591
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:595
+msgid "Memory Stick"
+msgstr "Memòria portàtil"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:592
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:596
+msgid "Camera"
+msgstr "Càmera"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:597
+msgid "DVD"
+msgstr "DVD"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:849
+msgid "Root Volume"
+msgstr "Volum arrel"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:930
+msgid "Audio CD"
+msgstr "CD d'àudio"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:963
+msgid "Unknown volume"
+msgstr "Volum desconegut"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:1175
+msgid "Network server"
+msgstr "Servidor de xarxa"
+
+#. Handle floppy case
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:184
+#, c-format
+msgid ""
+"Unable to mount the floppy drive. There is probably no floppy in the drive."
+msgstr ""
+"No s'ha pogut muntar la disquetera. Segurament no hi ha cap disquet a la "
+"unitat."
+
+#. All others
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:188
+#, c-format
+msgid "Unable to mount the volume. There is probably no media in the device."
+msgstr ""
+"No s'ha pogut muntar el volum. Segurament no hi ha cap medi al dispositiu."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:194
+#, c-format
+msgid ""
+"Unable to mount the floppy drive. The floppy is probably in a format that "
+"cannot be mounted."
+msgstr ""
+"No s'ha pogut muntar la disquetera. El disquet probablement és en un format "
+"que no es pot muntar."
+
+#. Probably a wrong password
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:198
+#, c-format
+msgid ""
+"Unable to mount the volume. If this is an encrypted drive, then the wrong "
+"password or key was used."
+msgstr ""
+"No s'ha pogut muntar el volum. Si és una unitat xifrada, potser s'ha fet "
+"servir una contrasenya o clau incorrectes."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:201
+#, c-format
+msgid ""
+"Unable to mount the selected volume. The volume is probably in a format that "
+"cannot be mounted."
+msgstr ""
+"No s'ha pogut muntar el volum seleccionat. El volum probablement és en un "
+"format que no es pot muntar."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:206
+msgid "Unable to mount the selected floppy drive."
+msgstr "No s'ha pogut muntar la unitat de disquet seleccionada."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:208
+msgid "Unable to mount the selected volume."
+msgstr "No s'ha pogut muntar el volum seleccionat."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:221
+#, c-format
+msgid ""
+"Unable to unmount the selected volume. The volume is in use by one or more "
+"programs."
+msgstr ""
+"No s'ha pogut muntar el volum seleccionat. Hi ha un o més programes que "
+"l'utilitzen."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:224
+msgid "Unable to unmount the selected volume."
+msgstr "No s'ha pogut desmuntar el volum seleccionat."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:377
+#, c-format
+msgid "Failed to read data from child process %d (%s)"
+msgstr "No s'ha pogut llegir del procés fill %d: (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:421
+msgid "Couldn't run mount process in a pty"
+msgstr "No s'ha pogut executar el procés de muntatge en un pty"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:466
+#, c-format
+msgid "Unexpected error in select() reading data from a child process (%s)"
+msgstr ""
+"S'ha produït un error inesperat a select() durant la lectura de dades d'un "
+"procés fill (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:520
+#, c-format
+msgid "Couldn't send password to mount process."
+msgstr "No s'ha pogut enviar una contrasenya al procés de mount."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:559
+#, c-format
+msgid "Unexpected error in waitpid() (%s)"
+msgstr "S'ha produït un error inesperat a waitpid() (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:669
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:755
+msgid "Failed to start command"
+msgstr "No s'ha pogut iniciar l'orde"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:742
+msgid "Unable to eject media"
+msgstr "No s'ha pogut ejectar el medi"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:983
+msgid "Unable to unmount connected server"
+msgstr "No s'ha pogut desmuntar el servidor connectat."
+
+#: ../modules/computer-method.c:543
+msgid "Network"
+msgstr "Xarxa"
+
+#: ../modules/computer-method.c:561
+msgid "Home"
+msgstr "Inici"
+
+#: ../modules/computer-method.c:579
+msgid "Filesystem"
+msgstr "Sistemes de fitxers"
+
+#: ../modules/file-method.c:497
+#, c-format
+msgid "Unknown GnomeVFSSeekPosition %d"
+msgstr "GnomeVFSSeekPosition %d desconeguda"
+
+#: ../modules/network-method.c:1399
+msgid "Windows Network"
+msgstr "Xarxa de Windows"
+
+#: ../modules/sftp-method.c:1424
+#, c-format
+msgid "The identity of the remote computer (%s) is unknown."
+msgstr "No es coneix la identitat de l'ordinador remot (%s)."
+
+#: ../modules/sftp-method.c:1425
+#, c-format
+msgid ""
+"This happens when you log in to a computer the first time.\n"
+"\n"
+"The identity sent by the remote computer is %s. If you want to be absolutely "
+"sure it is safe to continue, contact the system administrator."
+msgstr ""
+"Això passa quan entreu en un ordinador per primera vegada.\n"
+"\n"
+"La identitat enviada per l'ordinador remot és %s. Si voleu estar "
+"completament segur que és prudent continuar, contacteu amb l'administrador "
+"del sistema."
+
+#: ../modules/sftp-method.c:1433
+msgid "Log In Anyway"
+msgstr "Entra igualment"
+
+#: ../modules/sftp-method.c:1434
+msgid "Cancel Login"
+msgstr "Cancel·la l'entrada"
+
+#. FIXME: we probably shouldn't use printf to output the message
+#: ../modules/test-method.c:587
+#, c-format
+msgid "Didn't find a valid settings file at %s\n"
+msgstr "No s'ha trobat un fitxer de configuració vàlid a %s\n"
+
+#: ../modules/test-method.c:589
+#, c-format
+msgid "Use the %s environment variable to specify a different location.\n"
+msgstr ""
+"Utilitzeu la variable d'entorn %s per a especificar una localització "
+"diferent.\n"
+
+#: ../programs/authentication.c:106
+#, c-format
+msgid "Your HTTP Proxy requires you to log in.\n"
+msgstr "El vostre servidor intermediari d'HTTP requereix que hi entreu.\n"
+
+#: ../programs/authentication.c:107
+#, c-format
+msgid ""
+"You must log in to access \"%s\".\n"
+"%s"
+msgstr ""
+"Heu d'entrar primer per a poder accedir a «%s».\n"
+"%s"
+
+#: ../programs/authentication.c:110
+msgid "Your password will be transmitted unencrypted."
+msgstr "La vostra contrasenya es transmetrà sense xifrar."
+
+#: ../programs/authentication.c:111
+msgid "Your password will be transmitted encrypted."
+msgstr "La vostra contrasenya es transmetrà xifrada."
+
+#: ../programs/authentication.c:163
+#, c-format
+msgid "You must log in to access %s domain %s\n"
+msgstr "Heu d'entrar per a poder accedir a %s sota el domini %s\n"
+
+#: ../programs/authentication.c:165
+#, c-format
+msgid "You must log in to access %s\n"
+msgstr "Heu d'entrar per a poder accedir a %s\n"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:1
+msgid "Default component viewer application"
+msgstr "Aplicació de visualització de components predeterminada"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:2
+msgid "Default terminal application"
+msgstr "Aplicació de terminal predeterminada"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:3
+msgid "Exec argument for default terminal"
+msgstr "Argument d'execució per al terminal predeterminat"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:5
+#, no-c-format
+msgid ""
+"The application to use for viewing files that require a component to view "
+"them. The parameter %s will be replaced by the file's URIs, the parameter %c "
+"will be replaced by the component IID."
+msgstr ""
+"L'aplicació a usar per a visualitzar fitxers que requereixen un component "
+"per a poder ser visualitzats. Es reemplaçarà el paràmetre %s amb l'URI del "
+"fitxer, i es reemplaçarà el paràmetre %c amb l'IID del component."
+
+#: ../schemas/desktop_default_applications.schemas.in.h:6
+msgid ""
+"The default terminal application to use for applications that require a "
+"terminal."
+msgstr ""
+"L'aplicació de terminal a usar per defecte per a aplicacions que "
+"requerisquen un terminal."
+
+#: ../schemas/desktop_default_applications.schemas.in.h:7
+msgid "The exec argument to use for the default terminal application."
+msgstr ""
+"L'argument d'execució a usar per a l'aplicació de terminal predeterminada."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:1
+msgid "Run the command in a terminal"
+msgstr "Executa l'orde en un terminal"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:2
+msgid "The command used to handle \"aim\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «aim», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:3
+msgid "The command used to handle \"callto\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «callto», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:4
+msgid "The command used to handle \"ghelp\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «ghelp», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:5
+msgid "The command used to handle \"h323\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «h323», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:6
+msgid "The command used to handle \"http\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «http», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:7
+msgid "The command used to handle \"https\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «https», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:8
+msgid "The command used to handle \"info\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «info», si estan habilitades"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:9
+msgid "The command used to handle \"mailto\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «mailto», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:10
+msgid "The command used to handle \"man\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «man», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:11
+msgid "The command used to handle \"trash\" URLs, if enabled."
+msgstr "L'orde utilitzada per a gestionar URL «trash», si estan habilitades."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:12
+msgid "The handler for \"aim\" URLs"
+msgstr "El gestor per a les URL «aim»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:13
+msgid "The handler for \"callto\" URLs"
+msgstr "El gestor per a les URL «callto»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:14
+msgid "The handler for \"ghelp\" URLs"
+msgstr "El gestor per a les URL «ghelp»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:15
+msgid "The handler for \"h323\" URLs"
+msgstr "El gestor per a les URL «h323»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:16
+msgid "The handler for \"http\" URLs"
+msgstr "El gestor per a les URL «http»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:17
+msgid "The handler for \"https\" URLs"
+msgstr "El gestor per a les URL «https»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:18
+msgid "The handler for \"info\" URLs"
+msgstr "El gestor per a les URL «info»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:19
+msgid "The handler for \"mailto\" URLs"
+msgstr "El gestor per a les URL «mailto»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:20
+msgid "The handler for \"man\" URLs"
+msgstr "El gestor per a les URL «man»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:21
+msgid "The handler for \"trash\" URLs"
+msgstr "El gestor per a les URL «trash»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:22
+msgid ""
+"True if the command specified in the \"command\" key should handle \"aim\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «aim»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:23
+msgid ""
+"True if the command specified in the \"command\" key should handle \"callto"
+"\" URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «callto»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:24
+msgid ""
+"True if the command specified in the \"command\" key should handle \"ghelp\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «ghelp»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:25
+msgid ""
+"True if the command specified in the \"command\" key should handle \"h323\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «h323»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:26
+msgid ""
+"True if the command specified in the \"command\" key should handle \"http\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «http»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:27
+msgid ""
+"True if the command specified in the \"command\" key should handle \"https\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «https»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:28
+msgid ""
+"True if the command specified in the \"command\" key should handle \"info\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «info»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:29
+msgid ""
+"True if the command specified in the \"command\" key should handle \"mailto"
+"\" URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «mailto»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:30
+msgid ""
+"True if the command specified in the \"command\" key should handle \"man\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «man»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:31
+msgid ""
+"True if the command specified in the \"command\" key should handle \"trash\" "
+"URLs."
+msgstr ""
+"Vertader si el programa especificat en la clau «command» hauria de gestionar "
+"les URL «trash»."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:32
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr ""
+"Vertader si el programa per a gestionar este URL hauria d'executar-se en un "
+"terminal."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:33
+msgid "Whether the specified command should handle \"aim\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «aim»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:34
+msgid "Whether the specified command should handle \"callto\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «callto»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:35
+msgid "Whether the specified command should handle \"ghelp\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «ghelp»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:36
+msgid "Whether the specified command should handle \"h323\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «h323»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:37
+msgid "Whether the specified command should handle \"http\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «http»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:38
+msgid "Whether the specified command should handle \"https\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «https»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:39
+msgid "Whether the specified command should handle \"info\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «info»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:40
+msgid "Whether the specified command should handle \"mailto\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «mailto»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:41
+msgid "Whether the specified command should handle \"man\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «man»"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:42
+msgid "Whether the specified command should handle \"trash\" URLs"
+msgstr "Si l'orde especificada hauria de gestionar les URL «trash»"
+
+#: ../schemas/system_dns_sd.schemas.in.h:1
+msgid ""
+"Comma separated list of DNS-SD domains that should be visible in the "
+"\"network:///\" location."
+msgstr ""
+"Llista separada per comes de dominis DNS-SD que haurien de ser visibles a la "
+"ubicació «network:///»."
+
+#: ../schemas/system_dns_sd.schemas.in.h:2
+msgid "Extra domains to look for DNS-SD services in"
+msgstr "Dominis extra dins dels quals cercar serveis DNS-SD"
+
+#: ../schemas/system_dns_sd.schemas.in.h:3
+msgid "How to display local DNS-SD service"
+msgstr "Com mostrar serveis DNS-SD locals"
+
+#: ../schemas/system_dns_sd.schemas.in.h:4
+msgid "Possible values are \"merged\", \"separate\" and \"disabled\"."
+msgstr "Els valors possibles són «merged», «separate» i «disabled»."
+
+#: ../schemas/system_http_proxy.schemas.in.h:1
+msgid "Authenticate proxy server connections"
+msgstr "Autentica les connexions al servidor intermediari"
+
+#: ../schemas/system_http_proxy.schemas.in.h:2
+msgid "Automatic proxy configuration URL"
+msgstr "URL de configuració automàtica del servidor intermediari"
+
+#: ../schemas/system_http_proxy.schemas.in.h:3
+msgid "Enables the proxy settings when accessing HTTP over the Internet."
+msgstr ""
+"Habilita els paràmetres del servidor intermediari quan s'accedeix a HTTP per "
+"Internet."
+
+#: ../schemas/system_http_proxy.schemas.in.h:4
+msgid "FTP proxy host name"
+msgstr "Nom del servidor intermediari d'FTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:5
+msgid "FTP proxy port"
+msgstr "Port del servidor intermediari d'FTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:6
+msgid "HTTP proxy host name"
+msgstr "Nom del servidor intermediari d'HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:7
+msgid "HTTP proxy password"
+msgstr "Contrasenya del servidor intermediari d'HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:8
+msgid "HTTP proxy port"
+msgstr "Port del servidor intermediari d'HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:9
+msgid "HTTP proxy username"
+msgstr "Nom d'usuari del servidor intermediari d'HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:10
+msgid ""
+"If true, then connections to the proxy server require authentication. The "
+"username/password combo is defined by \"/system/http_proxy/"
+"authentication_user\" and \"/system/http_proxy/authentication_password\"."
+msgstr ""
+"Si és vertader, les connexions al servidor intermediari requereixen "
+"autenticació. La combinació usuari/contrasenya és definida per «/system/"
+"http_proxy/authentication_user» i «/system/http_proxy/"
+"authentication_password»."
+
+#: ../schemas/system_http_proxy.schemas.in.h:11
+msgid "Non-proxy hosts"
+msgstr "Ordinadors sense servidor intermediari"
+
+#: ../schemas/system_http_proxy.schemas.in.h:12
+msgid "Password to pass as authentication when doing HTTP proxying."
+msgstr ""
+"Contrasenya a passar com autenticació quan es fa servir el servidor "
+"intermediari d'HTTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:13
+msgid "Proxy configuration mode"
+msgstr "Mode de configuració del servidor intermediari"
+
+#: ../schemas/system_http_proxy.schemas.in.h:14
+msgid "SOCKS proxy host name"
+msgstr "Nom del servidor intermediari de SOCKS"
+
+#: ../schemas/system_http_proxy.schemas.in.h:15
+msgid "SOCKS proxy port"
+msgstr "Port del servidor intemediari de SOCKS"
+
+#: ../schemas/system_http_proxy.schemas.in.h:16
+msgid "Secure HTTP proxy host name"
+msgstr "Port del servidor intermediari d'HTTP segur"
+
+#: ../schemas/system_http_proxy.schemas.in.h:17
+msgid "Secure HTTP proxy port"
+msgstr "Port del servidor intermediari d'HTTP segur"
+
+#: ../schemas/system_http_proxy.schemas.in.h:18
+msgid ""
+"Select the proxy configuration mode. Supported values are \"none\", \"manual"
+"\", \"auto\"."
+msgstr ""
+"Selecciona el mode de configuració del servidor intermediari. Els valors "
+"disponibles són «none» (cap), «manual», «auto»."
+
+#: ../schemas/system_http_proxy.schemas.in.h:19
+msgid "The machine name to proxy FTP through."
+msgstr "El nom del servidor que fa de servidor intermediari d'FTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:20
+msgid "The machine name to proxy HTTP through."
+msgstr "El nom del servidor que fa de servidor intemediari d'HTTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:21
+msgid "The machine name to proxy secure HTTP through."
+msgstr "El nom del servidor que fa de servidor intermediari d'HTTP segur."
+
+#: ../schemas/system_http_proxy.schemas.in.h:22
+msgid "The machine name to proxy socks through."
+msgstr "El nom del servidor que fa de servidor intermediari de socks."
+
+#: ../schemas/system_http_proxy.schemas.in.h:23
+msgid ""
+"The port on the machine defined by \"/system/http_proxy/host\" that you "
+"proxy through."
+msgstr ""
+"El port a l'ordinador definit per «/system/http_proxy/host» pel que escolta "
+"el servidor intermediari."
+
+#: ../schemas/system_http_proxy.schemas.in.h:24
+msgid ""
+"The port on the machine defined by \"/system/proxy/ftp_host\" that you proxy "
+"through."
+msgstr ""
+"El port a l'ordinador definit per «/system/proxy/ftp_host» pel que escolta el "
+"servidor intermediari."
+
+#: ../schemas/system_http_proxy.schemas.in.h:25
+msgid ""
+"The port on the machine defined by \"/system/proxy/secure_host\" that you "
+"proxy through."
+msgstr ""
+"El port a l'ordinador definit per «/system/proxy/secure_host» pel que escolta "
+"el servidor intermediari."
+
+#: ../schemas/system_http_proxy.schemas.in.h:26
+msgid ""
+"The port on the machine defined by \"/system/proxy/socks_host\" that you "
+"proxy through."
+msgstr ""
+"El port a l'ordinador definit per «/system/proxy/socks_host» pel que escolta "
+"el servidor intermediari."
+
+#: ../schemas/system_http_proxy.schemas.in.h:27
+msgid ""
+"This key contains a list of hosts which are connected to directly, rather "
+"than via the proxy (if it is active). The values can be hostnames, domains "
+"(using an initial wildcard like *.foo.com), IP host addresses (both IPv4 and "
+"IPv6) and network addresses with a netmask (something like 192.168.0.0/24)."
+msgstr ""
+"Esta clau conté una llista d'ordinadors als que s'està connectat "
+"directament, i no a través d'un servidor intermediari (si és actiu). Els "
+"valors poden ser noms d'ordinador, dominis (usant un comodí inicial, com *."
+"foo.com), adreces IP d'ordinadors (tant IPv4 com IPv6) i adreces de xarxa "
+"amb una màscara de xarxa (alguna cosa com 192.168.0.0/24)."
+
+#: ../schemas/system_http_proxy.schemas.in.h:28
+msgid "URL that provides proxy configuration values."
+msgstr "URL que proveeix valors de configuració del servidor intermediari."
+
+#: ../schemas/system_http_proxy.schemas.in.h:29
+msgid "Use HTTP proxy"
+msgstr "Utilitza un servidor intermediari d'HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:30
+msgid "User name to pass as authentication when doing HTTP proxying."
+msgstr ""
+"Nom d'usuari a passar com autenticació quan es fa servir el servidor "
+"intermediari d'HTTP."
+
+#: ../schemas/system_smb.schemas.in.h:1
+msgid "SMB workgroup"
+msgstr "Grup de treball d'SMB"
+
+#: ../schemas/system_smb.schemas.in.h:2
+msgid ""
+"The Windows networking workgroup or domain that the user is part of. In "
+"order for a new workgroup to fully take effect the user may need to log out "
+"and log back in."
+msgstr ""
+"El grup de treball o domini de la xarxa de Windows al qual pertany l'usuari. "
+"Per a que un grup de treball nou tinga efecte, és possible que l'usuari "
+"necessite eixir i tornar a entrar."

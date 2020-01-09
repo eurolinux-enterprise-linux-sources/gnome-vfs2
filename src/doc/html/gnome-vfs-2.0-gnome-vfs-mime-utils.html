@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>gnome-vfs-mime-utils</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.74.3">
+<link rel="home" href="index.html" title="GnomeVFS - Filesystem Abstraction library">
+<link rel="up" href="mime-registry.html" title="MIME Registry">
+<link rel="prev" href="gnome-vfs-2.0-gnome-vfs-mime.html" title="MIME typing">
+<link rel="next" href="gnome-vfs-2.0-gnome-vfs-mime-database.html" title="MIME Database">
+<meta name="generator" content="GTK-Doc V1.12 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="about.html" title="Introduction to GnomeVFS">
+<link rel="chapter" href="data-types.html" title="Basic Data Types">
+<link rel="chapter" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="chapter" href="gnome-vfs-directory-ops.html" title="Directory-Specific Operations">
+<link rel="chapter" href="gnome-vfs-file-and-dirs-ops.html" title="Advanced File/Directory Operations">
+<link rel="chapter" href="gnome-vfs-file-async-ops.html" title="Asynchronous Operations">
+<link rel="chapter" href="volumes.html" title="Volumes and Drives Handling">
+<link rel="chapter" href="networking.html" title="Networking">
+<link rel="chapter" href="mime-registry.html" title="MIME Registry">
+<link rel="chapter" href="modules.html" title="Filesystem Modules">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gnome-vfs-2.0-gnome-vfs-mime.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="mime-registry.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GnomeVFS - Filesystem Abstraction library</th>
+<td><a accesskey="n" href="gnome-vfs-2.0-gnome-vfs-mime-database.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gnome-vfs-2.0-gnome-vfs-mime-utils.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gnome-vfs-2.0-gnome-vfs-mime-utils.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-mime-utils"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnome-vfs-2.0-gnome-vfs-mime-utils.top_of_page"></a>gnome-vfs-mime-utils</span></h2>
+<p>gnome-vfs-mime-utils</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gnome-vfs-2.0-gnome-vfs-mime-utils.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+#define             <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS" title="GNOME_VFS_MIME_TYPE_UNKNOWN">GNOME_VFS_MIME_TYPE_UNKNOWN</a>
+enum                <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GnomeVFSMimeEquivalence" title="enum GnomeVFSMimeEquivalence">GnomeVFSMimeEquivalence</a>;
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GnomeVFSMimeEquivalence" title="enum GnomeVFSMimeEquivalence">GnomeVFSMimeEquivalence</a>  <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-mime-type-get-equivalence" title="gnome_vfs_mime_type_get_equivalence ()">gnome_vfs_mime_type_get_equivalence</a>
+                                                        (const char *mime_type,
+                                                         const char *base_mime_type);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-mime-type-is-equal" title="gnome_vfs_mime_type_is_equal ()">gnome_vfs_mime_type_is_equal</a>        (const char *a,
+                                                         const char *b);
+const char *        <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-get-mime-type-for-name" title="gnome_vfs_get_mime_type_for_name ()">gnome_vfs_get_mime_type_for_name</a>    (const char *filename);
+const char *        <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-get-mime-type-for-data" title="gnome_vfs_get_mime_type_for_data ()">gnome_vfs_get_mime_type_for_data</a>    (<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer">gconstpointer</a> data,
+                                                         int data_size);
+const char *        <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-get-mime-type-for-name-and-data" title="gnome_vfs_get_mime_type_for_name_and_data ()">gnome_vfs_get_mime_type_for_name_and_data</a>
+                                                        (const char *filename,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer">gconstpointer</a> data,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gssize">gssize</a> data_size);
+char *              <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-get-mime-type" title="gnome_vfs_get_mime_type ()">gnome_vfs_get_mime_type</a>             (const char *text_uri);
+char *              <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-get-slow-mime-type" title="gnome_vfs_get_slow_mime_type ()">gnome_vfs_get_slow_mime_type</a>        (const char *text_uri);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-mime-utils.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-mime-utils.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS"></a><h3>GNOME_VFS_MIME_TYPE_UNKNOWN</h3>
+<pre class="programlisting">#define GNOME_VFS_MIME_TYPE_UNKNOWN "application/octet-stream"
+</pre>
+<p>
+The value returned for the MIME type when a file did
+not match any entries in the MIME database. May be
+treated as a file of an unknown type.</p>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="GnomeVFSMimeEquivalence"></a><h3>enum GnomeVFSMimeEquivalence</h3>
+<pre class="programlisting">typedef enum {
+  GNOME_VFS_MIME_UNRELATED,
+  GNOME_VFS_MIME_IDENTICAL,
+  GNOME_VFS_MIME_PARENT
+} GnomeVFSMimeEquivalence;
+</pre>
+<p>
+Describes the possible relationship between two MIME types, returned by
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#gnome-vfs-mime-type-get-equivalence" title="gnome_vfs_mime_type_get_equivalence ()"><code class="function">gnome_vfs_mime_type_get_equivalence()</code></a>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GNOME-VFS-MIME-UNRELATED:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_MIME_UNRELATED</code></span></p></td>
+<td> The two MIME types are not related.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-MIME-IDENTICAL:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_MIME_IDENTICAL</code></span></p></td>
+<td> The two MIME types are identical.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-MIME-PARENT:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_MIME_PARENT</code></span></p></td>
+<td> One of the two MIME types is a parent of the other one.
+			   Note that this relationship is transient, i.e. if
+			   <code class="literal">a</code> is a parent of <code class="literal">b</code> and <code class="literal">b</code> is a parent of <code class="literal">c</code>,
+			   <code class="literal">a</code> is also considered a parent of <code class="literal">c</code>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-mime-type-get-equivalence"></a><h3>gnome_vfs_mime_type_get_equivalence ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GnomeVFSMimeEquivalence" title="enum GnomeVFSMimeEquivalence">GnomeVFSMimeEquivalence</a>  gnome_vfs_mime_type_get_equivalence
+                                                        (const char *mime_type,
+                                                         const char *base_mime_type);</pre>
+<p>
+Compares <em class="parameter"><code>mime_type</code></em> to <em class="parameter"><code>base_mime_type</code></em>.  There are three possible
+relationships between the two strings.
+</p>
+<p>
+</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>
+ If they are identical and <em class="parameter"><code>mime_type</code></em> is the same as <em class="parameter"><code>base_mime_type</code></em>,
+ then <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-IDENTICAL:CAPS"><code class="literal">GNOME_VFS_MIME_IDENTICAL</code></a> is returned. This would be the case if
+ "audio/midi" and "audio/x-midi" are passed in.
+</p></li>
+<li><p>
+If <em class="parameter"><code>base_mime_type</code></em> is a parent type of <em class="parameter"><code>mime_type</code></em>, then
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-PARENT:CAPS"><code class="literal">GNOME_VFS_MIME_PARENT</code></a> is returned.  As an example, "text/plain" is a parent
+of "text/rss", "image" is a parent of "image/png", and
+"application/octet-stream" is a parent of almost all types.
+</p></li>
+<li><p>
+Finally, if the two mime types are unrelated, then <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-UNRELATED:CAPS"><code class="literal">GNOME_VFS_MIME_UNRELATED</code></a>
+is returned.
+</p></li>
+</ul></div>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>mime_type</code></em> :</span></p></td>
+<td> a const char * containing a mime type, e.g. "image/png".
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>base_mime_type</code></em> :</span></p></td>
+<td> a const char * containing either a mime type or a base mime type.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> A <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GnomeVFSMimeEquivalence" title="enum GnomeVFSMimeEquivalence"><span class="type">GnomeVFSMimeEquivalence</span></a> indicating the relationship between <em class="parameter"><code>mime_type</code></em> and <em class="parameter"><code>base_mime_type</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-mime-type-is-equal"></a><h3>gnome_vfs_mime_type_is_equal ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            gnome_vfs_mime_type_is_equal        (const char *a,
+                                                         const char *b);</pre>
+<p>
+Compares two mime types to determine if they are equivalent.  They are
+equivalent if and only if they refer to the same mime type.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>a</code></em> :</span></p></td>
+<td> a const char * containing a mime type, e.g. "image/png".
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>b</code></em> :</span></p></td>
+<td> a const char * containing a mime type, e.g. "image/png".
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, if a and b are equivalent mime types.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-get-mime-type-for-name"></a><h3>gnome_vfs_get_mime_type_for_name ()</h3>
+<pre class="programlisting">const char *        gnome_vfs_get_mime_type_for_name    (const char *filename);</pre>
+<p>
+Determine the mime type for <em class="parameter"><code>filename</code></em>. The file <em class="parameter"><code>filename</code></em> may
+not exist, this function does not access the actual file.
+If the mime-type cannot be determined, <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS" title="GNOME_VFS_MIME_TYPE_UNKNOWN"><code class="literal">GNOME_VFS_MIME_TYPE_UNKNOWN</code></a>
+is returned.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filename</code></em> :</span></p></td>
+<td> a filename.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the mime-type for this filename or
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS" title="GNOME_VFS_MIME_TYPE_UNKNOWN"><code class="literal">GNOME_VFS_MIME_TYPE_UNKNOWN</code></a> if mime-type could not be determined.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.14</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-get-mime-type-for-data"></a><h3>gnome_vfs_get_mime_type_for_data ()</h3>
+<pre class="programlisting">const char *        gnome_vfs_get_mime_type_for_data    (<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer">gconstpointer</a> data,
+                                                         int data_size);</pre>
+<p>
+Tries to guess the mime type of the data in <em class="parameter"><code>data</code></em>
+using the magic patterns.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td> a pointer to data in memory.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_size</code></em> :</span></p></td>
+<td> size of the data.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the mime-type for <em class="parameter"><code>data</code></em>.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-get-mime-type-for-name-and-data"></a><h3>gnome_vfs_get_mime_type_for_name_and_data ()</h3>
+<pre class="programlisting">const char *        gnome_vfs_get_mime_type_for_name_and_data
+                                                        (const char *filename,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gconstpointer">gconstpointer</a> data,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gssize">gssize</a> data_size);</pre>
+<p>
+Determine the mime-type for <em class="parameter"><code>filename</code></em> and <em class="parameter"><code>data</code></em>. This function tries
+to be smart (e.g. mime subclassing) about returning the right mime-type 
+by looking at both the <em class="parameter"><code>data</code></em> and the <em class="parameter"><code>filename</code></em>. The file will not be 
+accessed.
+If the mime-type cannot be determined, <a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS" title="GNOME_VFS_MIME_TYPE_UNKNOWN"><code class="literal">GNOME_VFS_MIME_TYPE_UNKNOWN</code></a>
+is returned.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>filename</code></em> :</span></p></td>
+<td> a filename.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data</code></em> :</span></p></td>
+<td> a pointer to the data in the memory
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>data_size</code></em> :</span></p></td>
+<td> the size of <em class="parameter"><code>data</code></em>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> the mime-type for this filename or
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-mime-utils.html#GNOME-VFS-MIME-TYPE-UNKNOWN:CAPS" title="GNOME_VFS_MIME_TYPE_UNKNOWN"><code class="literal">GNOME_VFS_MIME_TYPE_UNKNOWN</code></a> if mime-type could not be determined.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.14</p>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-get-mime-type"></a><h3>gnome_vfs_get_mime_type ()</h3>
+<pre class="programlisting">char *              gnome_vfs_get_mime_type             (const char *text_uri);</pre>
+<p>
+Determine the mime type of <em class="parameter"><code>text_uri</code></em>. The mime type is determined
+in the same way as by <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-info-ops.html#gnome-vfs-get-file-info" title="gnome_vfs_get_file_info ()"><code class="function">gnome_vfs_get_file_info()</code></a>. This is meant as
+a convenient function for times when you only want the mime type.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_uri</code></em> :</span></p></td>
+<td> path of the file for which to get the mime type.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The mime type, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is an error reading
+the file.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-get-slow-mime-type"></a><h3>gnome_vfs_get_slow_mime_type ()</h3>
+<pre class="programlisting">char *              gnome_vfs_get_slow_mime_type        (const char *text_uri);</pre>
+<p>
+Determine the mime type of <em class="parameter"><code>text_uri</code></em>. The mime type is determined
+in the same way as by <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-info-ops.html#gnome-vfs-get-file-info" title="gnome_vfs_get_file_info ()"><code class="function">gnome_vfs_get_file_info()</code></a>. This is meant as
+a convenience function for times when you only want the mime type.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_uri</code></em> :</span></p></td>
+<td> URI of the file for which to get the mime type
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> The mime type, or NULL if there is an error reading 
+the file.
+
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 2.14</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.12</div>
+</body>
+</html>

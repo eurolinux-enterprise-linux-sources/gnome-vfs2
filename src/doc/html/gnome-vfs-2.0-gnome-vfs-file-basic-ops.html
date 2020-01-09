@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Basic File Operations</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.74.3">
+<link rel="home" href="index.html" title="GnomeVFS - Filesystem Abstraction library">
+<link rel="up" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="prev" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="next" href="gnome-vfs-2.0-gnome-vfs-file-rw-ops.html" title="Reading and Writing Files">
+<meta name="generator" content="GTK-Doc V1.12 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="chapter" href="about.html" title="Introduction to GnomeVFS">
+<link rel="chapter" href="data-types.html" title="Basic Data Types">
+<link rel="chapter" href="gnome-vfs-basic-file-ops.html" title="File Operations">
+<link rel="chapter" href="gnome-vfs-directory-ops.html" title="Directory-Specific Operations">
+<link rel="chapter" href="gnome-vfs-file-and-dirs-ops.html" title="Advanced File/Directory Operations">
+<link rel="chapter" href="gnome-vfs-file-async-ops.html" title="Asynchronous Operations">
+<link rel="chapter" href="volumes.html" title="Volumes and Drives Handling">
+<link rel="chapter" href="networking.html" title="Networking">
+<link rel="chapter" href="mime-registry.html" title="MIME Registry">
+<link rel="chapter" href="modules.html" title="Filesystem Modules">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="gnome-vfs-basic-file-ops.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="gnome-vfs-basic-file-ops.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">GnomeVFS - Filesystem Abstraction library</th>
+<td><a accesskey="n" href="gnome-vfs-2.0-gnome-vfs-file-rw-ops.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#gnome-vfs-2.0-gnome-vfs-file-basic-ops.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#gnome-vfs-2.0-gnome-vfs-file-basic-ops.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-file-basic-ops"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="gnome-vfs-2.0-gnome-vfs-file-basic-ops.top_of_page"></a>Basic File Operations</span></h2>
+<p>Basic File Operations — Essential VFS operations. This includes creating, moving and deleting files, opening and closing file handles.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="gnome-vfs-2.0-gnome-vfs-file-basic-ops.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">
+enum                <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a>;
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-create" title="gnome_vfs_create ()">gnome_vfs_create</a>                    (GnomeVFSHandle **handle,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> exclusive,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint">guint</a> perm);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-create-uri" title="gnome_vfs_create_uri ()">gnome_vfs_create_uri</a>                (GnomeVFSHandle **handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> exclusive,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint">guint</a> perm);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-open" title="gnome_vfs_open ()">gnome_vfs_open</a>                      (GnomeVFSHandle **handle,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-open-uri" title="gnome_vfs_open_uri ()">gnome_vfs_open_uri</a>                  (GnomeVFSHandle **handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-close" title="gnome_vfs_close ()">gnome_vfs_close</a>                     (GnomeVFSHandle *handle);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-unlink" title="gnome_vfs_unlink ()">gnome_vfs_unlink</a>                    (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-unlink-from-uri" title="gnome_vfs_unlink_from_uri ()">gnome_vfs_unlink_from_uri</a>           (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-move-uri" title="gnome_vfs_move_uri ()">gnome_vfs_move_uri</a>                  (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *old_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *new_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> force_replace);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-move" title="gnome_vfs_move ()">gnome_vfs_move</a>                      (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *old_text_uri,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *new_text_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> force_replace);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-check-same-fs-uris" title="gnome_vfs_check_same_fs_uris ()">gnome_vfs_check_same_fs_uris</a>        (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *source_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *target_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> *same_fs_return);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-check-same-fs" title="gnome_vfs_check_same_fs ()">gnome_vfs_check_same_fs</a>             (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *source,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *target,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> *same_fs_return);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-uri-exists" title="gnome_vfs_uri_exists ()">gnome_vfs_uri_exists</a>                (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri);
+<a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#gnome-vfs-create-symbolic-link" title="gnome_vfs_create_symbolic_link ()">gnome_vfs_create_symbolic_link</a>      (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *target_reference);
+</pre>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-file-basic-ops.description"></a><h2>Description</h2>
+<p>
+GnomeVFS file operations are, for the most part, patterned after
+their POSIX equivalents, with the systematic difference that they
+accept URIs rather than paths on the local filesystem. This makes
+them easy to learn as if you are already familiar with basic commands
+such as <code class="function">open()</code>, <code class="function">seek()</code>, <code class="function">write()</code>, etc you will feel right at home
+with GnomeVFS after learning a little about URIs.
+</p>
+</div>
+<div class="refsect1" lang="en">
+<a name="gnome-vfs-2.0-gnome-vfs-file-basic-ops.details"></a><h2>Details</h2>
+<div class="refsect2" lang="en">
+<a name="GnomeVFSOpenMode"></a><h3>enum GnomeVFSOpenMode</h3>
+<pre class="programlisting">typedef enum {
+        GNOME_VFS_OPEN_NONE = 0,
+        GNOME_VFS_OPEN_READ = 1 &lt;&lt; 0,
+        GNOME_VFS_OPEN_WRITE = 1 &lt;&lt; 1,
+        GNOME_VFS_OPEN_RANDOM = 1 &lt;&lt; 2,
+	GNOME_VFS_OPEN_TRUNCATE = 1 &lt;&lt; 3
+} GnomeVFSOpenMode;
+</pre>
+<p>
+Mode in which files are opened. If GNOME_VFS_OPEN_RANDOM is not used, the
+file will be have to be accessed sequentially.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><a name="GNOME-VFS-OPEN-NONE:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_OPEN_NONE</code></span></p></td>
+<td> No access.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-OPEN-READ:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_OPEN_READ</code></span></p></td>
+<td> Read access.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-OPEN-WRITE:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_OPEN_WRITE</code></span></p></td>
+<td> Write access.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-OPEN-RANDOM:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_OPEN_RANDOM</code></span></p></td>
+<td> Random access.
+</td>
+</tr>
+<tr>
+<td><p><a name="GNOME-VFS-OPEN-TRUNCATE:CAPS"></a><span class="term"><code class="literal">GNOME_VFS_OPEN_TRUNCATE</code></span></p></td>
+<td> Truncate file before accessing it, i.e. delete its contents.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-create"></a><h3>gnome_vfs_create ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_create                    (GnomeVFSHandle **handle,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> exclusive,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint">guint</a> perm);</pre>
+<p>
+Create <em class="parameter"><code>text_uri</code></em> according to mode <em class="parameter"><code>open_mode</code></em>.  On return, <em class="parameter"><code>handle</code></em> will then
+contain a pointer to a handle for the open file.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a pointer to a <span class="type">GnomeVFSHandle</span> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_uri</code></em> :</span></p></td>
+<td> string representing the uri to create.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>open_mode</code></em> :</span></p></td>
+<td> mode to leave the file opened in after creation (or <code class="literal">GNOME_VFS_OPEN_MODE_NONE</code>
+to leave the file closed after creation).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exclusive</code></em> :</span></p></td>
+<td> whether the file should be created in "exclusive" mode.
+i.e. if this flag is nonzero, operation will fail if a file with the
+same name already exists.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>perm</code></em> :</span></p></td>
+<td> bitmap representing the permissions for the newly created file
+(Unix style).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-create-uri"></a><h3>gnome_vfs_create_uri ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_create_uri                (GnomeVFSHandle **handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> exclusive,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint">guint</a> perm);</pre>
+<p>
+Create <em class="parameter"><code>uri</code></em> according to mode <em class="parameter"><code>open_mode</code></em>.  On return, <em class="parameter"><code>handle</code></em> will then
+contain a pointer to a handle for the open file.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a pointer to a <span class="type">GnomeVFSHandle</span> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> uri for the file to create.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>open_mode</code></em> :</span></p></td>
+<td> open mode.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>exclusive</code></em> :</span></p></td>
+<td> whether the file should be created in "exclusive" mode.
+i.e. if this flag is nonzero, operation will fail if a file with the
+same name already exists.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>perm</code></em> :</span></p></td>
+<td> bitmap representing the permissions for the newly created file
+(Unix style).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-open"></a><h3>gnome_vfs_open ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_open                      (GnomeVFSHandle **handle,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode);</pre>
+<p>
+Open <em class="parameter"><code>text_uri</code></em> according to mode <em class="parameter"><code>open_mode</code></em>.  On return, <em class="parameter"><code>handle</code></em> will then
+contain a pointer to a handle for the open file.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a pointer to a <span class="type">GnomeVFSHandle</span> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_uri</code></em> :</span></p></td>
+<td> string representing the uri to open.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>open_mode</code></em> :</span></p></td>
+<td> open mode.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-open-uri"></a><h3>gnome_vfs_open_uri ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_open_uri                  (GnomeVFSHandle **handle,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-file-basic-ops.html#GnomeVFSOpenMode" title="enum GnomeVFSOpenMode">GnomeVFSOpenMode</a> open_mode);</pre>
+<p>
+Open <em class="parameter"><code>uri</code></em> according to mode <em class="parameter"><code>open_mode</code></em>.  On return, <em class="parameter"><code>handle</code></em> will then
+contain a pointer to a handle for the open file.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a pointer to a <span class="type">GnomeVFSHandle</span> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> uri to open.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>open_mode</code></em> :</span></p></td>
+<td> open mode.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-close"></a><h3>gnome_vfs_close ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_close                     (GnomeVFSHandle *handle);</pre>
+<p>
+Close file associated with <em class="parameter"><code>handle</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>handle</code></em> :</span></p></td>
+<td> pointer to a <span class="type">GnomeVFSHandle</span> object.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-unlink"></a><h3>gnome_vfs_unlink ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_unlink                    (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *text_uri);</pre>
+<p>
+Unlink <em class="parameter"><code>text_uri</code></em> (i.e. delete the file).</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>text_uri</code></em> :</span></p></td>
+<td> uri of the file to be unlinked.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-unlink-from-uri"></a><h3>gnome_vfs_unlink_from_uri ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_unlink_from_uri           (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri);</pre>
+<p>
+Unlink <em class="parameter"><code>uri</code></em> (i.e. delete the file).</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> uri of the file to be unlinked.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-move-uri"></a><h3>gnome_vfs_move_uri ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_move_uri                  (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *old_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *new_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> force_replace);</pre>
+<p>
+Move a file from uri <em class="parameter"><code>old_uri</code></em> to <em class="parameter"><code>new_uri</code></em>.  This will only work if <em class="parameter"><code>old_uri</code></em> 
+and <em class="parameter"><code>new_uri</code></em> are on the same file system.  Otherwise, it is necessary 
+to use the more general <a class="link" href="gnome-vfs-2.0-gnome-vfs-xfer.html#gnome-vfs-xfer-uri" title="gnome_vfs_xfer_uri ()"><code class="function">gnome_vfs_xfer_uri()</code></a> function.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_uri</code></em> :</span></p></td>
+<td> source uri.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_uri</code></em> :</span></p></td>
+<td> destination uri.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>force_replace</code></em> :</span></p></td>
+<td> if <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, move <em class="parameter"><code>old_uri</code></em> to <em class="parameter"><code>new_uri</code></em> even if there 
+is already a file at <em class="parameter"><code>new_uri</code></em>. If there is a file, it will be discarded.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-move"></a><h3>gnome_vfs_move ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_move                      (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *old_text_uri,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *new_text_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> force_replace);</pre>
+<p>
+Move a file from <em class="parameter"><code>old_text_uri</code></em> to <em class="parameter"><code>new_text_uri</code></em>.  This will only work 
+if <em class="parameter"><code>old_text_uri</code></em> and <em class="parameter"><code>new_text_uri</code></em> are on the same file system.  Otherwise,
+it is necessary to use the more general <a class="link" href="gnome-vfs-2.0-gnome-vfs-xfer.html#gnome-vfs-xfer-uri" title="gnome_vfs_xfer_uri ()"><code class="function">gnome_vfs_xfer_uri()</code></a> function.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>old_text_uri</code></em> :</span></p></td>
+<td> string representing the source file location.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>new_text_uri</code></em> :</span></p></td>
+<td> string representing the destination file location.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>force_replace</code></em> :</span></p></td>
+<td> if <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, perform the operation even if it unlinks an existing
+file at <em class="parameter"><code>new_text_uri</code></em>.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-check-same-fs-uris"></a><h3>gnome_vfs_check_same_fs_uris ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_check_same_fs_uris        (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *source_uri,
+                                                         <a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *target_uri,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> *same_fs_return);</pre>
+<p>
+Check if <em class="parameter"><code>source_uri</code></em> and <em class="parameter"><code>target_uri</code></em> are on the same file system.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source_uri</code></em> :</span></p></td>
+<td> a uri.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target_uri</code></em> :</span></p></td>
+<td> another uri.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>same_fs_return</code></em> :</span></p></td>
+<td> pointer to a boolean variable which will be set to <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
+on return if <em class="parameter"><code>source_uri</code></em> and <em class="parameter"><code>target_uri</code></em> are on the same file system.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-check-same-fs"></a><h3>gnome_vfs_check_same_fs ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_check_same_fs             (const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *source,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *target,
+                                                         <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> *same_fs_return);</pre>
+<p>
+Check if <em class="parameter"><code>source</code></em> and <em class="parameter"><code>target</code></em> are on the same file system.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>source</code></em> :</span></p></td>
+<td> path to a file.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target</code></em> :</span></p></td>
+<td> path to another file.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>same_fs_return</code></em> :</span></p></td>
+<td> pointer to a boolean variable which will be set to <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>
+on return if <em class="parameter"><code>source</code></em> and <em class="parameter"><code>target</code></em> are on the same file system.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-uri-exists"></a><h3>gnome_vfs_uri_exists ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>            gnome_vfs_uri_exists                (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri);</pre>
+<p>
+Check if the uri points to an existing entity.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> a uri.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if uri exists.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2" lang="en">
+<a name="gnome-vfs-create-symbolic-link"></a><h3>gnome_vfs_create_symbolic_link ()</h3>
+<pre class="programlisting"><a class="link" href="gnome-vfs-2.0-gnome-vfs-result.html#GnomeVFSResult" title="enum GnomeVFSResult">GnomeVFSResult</a>      gnome_vfs_create_symbolic_link      (<a class="link" href="gnome-vfs-2.0-gnome-vfs-uri.html#GnomeVFSURI" title="GnomeVFSURI">GnomeVFSURI</a> *uri,
+                                                         const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *target_reference);</pre>
+<p>
+Creates a symbolic link, or eventually, a uri link (as necessary) 
+at <em class="parameter"><code>uri</code></em> pointing to <em class="parameter"><code>target_reference</code></em>.</p>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>uri</code></em> :</span></p></td>
+<td> uri to create a link at.
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>target_reference</code></em> :</span></p></td>
+<td> uri "reference" to point the link to (uri or relative path).
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> an integer representing the result of the operation.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.12</div>
+</body>
+</html>
