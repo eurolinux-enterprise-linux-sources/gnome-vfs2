@@ -10,7 +10,7 @@
 Summary: The GNOME virtual file-system libraries
 Name: gnome-vfs2
 Version: 2.24.4
-Release: 12%{?dist}
+Release: 14%{?dist}
 License: LGPLv2+ and GPLv2+
 # the daemon and the library are LGPLv2+
 # the modules are LGPLv2+ and GPLv2+
@@ -231,6 +231,12 @@ find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 %config %{_sysconfdir}/gnome-vfs-2.0/modules/smb-module.conf
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 2.24.4-14
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.24.4-13
+- Mass rebuild 2013-12-27
+
 * Wed Mar 27 2013 Tomas Bzatek <tbzatek@redhat.com> - 2.24.4-12
 - Disable -DG_DISABLE_DEPRECATED
 
