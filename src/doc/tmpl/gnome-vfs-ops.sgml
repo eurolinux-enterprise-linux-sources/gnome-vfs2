@@ -1,0 +1,35 @@
+<!-- ##### SECTION Title ##### -->
+File Operations
+
+<!-- ##### SECTION Short_Description ##### -->
+
+basic POSIX-style file operations
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### TYPEDEF GnomeVFSMethodHandle ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### TYPEDEF GnomeVFSHandle ##### -->
+<para>
+
+</para>
+
+

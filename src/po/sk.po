@@ -1,0 +1,1516 @@
+# Slovak translation for gnome-vfs.
+# Copyright (C) 2000, 2001, 2003, 2004, 2005, 2008, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-vfs package.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2000, 2001, 2003, 2004.
+# Ivan Noris <vix@vazka.sk>, 2004, 2005.
+# Marcel Telka <marcel@telka.sk>, 2008, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-vfs\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"vfs&component=general\n"
+"POT-Creation-Date: 2010-02-19 10:35+0000\n"
+"PO-Revision-Date: 2010-02-23 00:53+0100\n"
+"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+
+#: ../libgnomevfs/gnome-vfs-cdrom.c:237
+msgid "ISO 9660 Volume"
+msgstr "Zväzok ISO 9660"
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:225
+#, c-format
+msgid "%s:%u contains NUL characters."
+msgstr "%s:%u obsahuje znaky NUL."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:242
+#, c-format
+msgid "%s:%u contains no method name."
+msgstr "%s:%u neobsahuje názov metódy."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:282
+#, c-format
+msgid "%s:%u has no options endmarker."
+msgstr "%s:%u neobsahuje koncovú značku volieb."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:293
+#, c-format
+msgid "%s:%u has unknown options %s."
+msgstr "%s:%u obsahuje neznáme voľby %s."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:312
+#, c-format
+msgid "%s:%u contains no module name."
+msgstr "%s:%u neobsahuje názov modulu."
+
+#: ../libgnomevfs/gnome-vfs-configuration.c:363
+#, c-format
+msgid "Configuration file `%s' was not found: %s"
+msgstr "Konfiguračný súbor '%s' nebol nájdený: %s"
+
+#. stop parsing if we failed
+#: ../libgnomevfs/gnome-vfs-configuration.c:382
+#, c-format
+msgid "%s:%d aborted parsing."
+msgstr "%s:%d analýza zlyhala."
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:39
+msgid "AFFS Volume"
+msgstr "Zväzok AFFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:40
+msgid "AFS Network Volume"
+msgstr "Sieťový zväzok AFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:41
+msgid "Auto-detected Volume"
+msgstr "Automaticky určený zväzok"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:42
+msgid "Btrfs Linux Volume"
+msgstr "Linuxový zväzok Btrfs"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:43
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:45
+msgid "CD-ROM Drive"
+msgstr "Mechanika CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:44
+msgid "CD Digital Audio"
+msgstr "Zvukové CD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:46
+msgid "Hardware Device Volume"
+msgstr "Zväzok hardvérového zariadenia"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:47
+msgid "EncFS Volume"
+msgstr "Zväzok EncFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:48
+msgid "eCryptfs Volume"
+msgstr "Zväzok eCryptfs"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:49
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:50
+msgid "Ext2 Linux Volume"
+msgstr "Linuxový zväzok Ext2"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:51
+msgid "Ext3 Linux Volume"
+msgstr "Linuxový zväzok Ext3"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:52
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:53
+msgid "Ext4 Linux Volume"
+msgstr "Linuxový zväzok Ext4"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:54
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:68
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:69
+msgid "MSDOS Volume"
+msgstr "Zväzok MSDOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:55
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:64
+msgid "BSD Volume"
+msgstr "Zväzok BSD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:56
+msgid "FUSE Volume"
+msgstr "Zväzok FUSE"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:57
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:58
+msgid "MacOS Volume"
+msgstr "Zväzok MacOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:59
+msgid "CDROM Volume"
+msgstr "Zväzok CDROM"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:60
+msgid "Hsfs CDROM Volume"
+msgstr "Zväzok Hsfs CDROM"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:61
+msgid "JFS Volume"
+msgstr "Zväzok JFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:62
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:71
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:72
+msgid "Windows NT Volume"
+msgstr "Zväzok Windows NT"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:63
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:65
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:75
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:76
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:77
+msgid "System Volume"
+msgstr "Systémový zväzok"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:66
+msgid "Memory Volume"
+msgstr "Pamäťový zväzok"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:67
+msgid "Minix Volume"
+msgstr "Zväzok Minix"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:70
+msgid "NFS Network Volume"
+msgstr "Sieťový zväzok NFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:73
+msgid "NILFS Linux Volume"
+msgstr "Linuxový zväzok NILFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:74
+msgid "Netware Volume"
+msgstr "Zväzok Netware"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:78
+msgid "Reiser4 Linux Volume"
+msgstr "Linuxový zväzok Reiser4"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:79
+msgid "ReiserFS Linux Volume"
+msgstr "Linuxový zväzok ReiserFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:80
+msgid "Windows Shared Volume"
+msgstr "Zdieľaný zväzok Windows"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:81
+msgid "SuperMount Volume"
+msgstr "Zväzok SuperMount"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:82
+msgid "DVD Volume"
+msgstr "Zväzok DVD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:83
+msgid "Solaris/BSD Volume"
+msgstr "Zväzok Solaris/BSD"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:84
+msgid "Udfs Solaris Volume"
+msgstr "Zväzok Solaris Udfs"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:85
+msgid "Pcfs Solaris Volume"
+msgstr "Zväzok Solaris Pcfs"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:86
+msgid "Sun SAM-QFS Volume"
+msgstr "Zväzok Sun SAM-QFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:87
+msgid "Temporary Volume"
+msgstr "Dočasný zväzok"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:88
+msgid "Enhanced DOS Volume"
+msgstr "Rozšírený zväzok DOS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:89
+msgid "Windows VFAT Volume"
+msgstr "Zväzok Windows VFAT"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:90
+msgid "Xenix Volume"
+msgstr "Zväzok Xenix"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:91
+msgid "XFS Linux Volume"
+msgstr "Linuxový zväzok XFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:92
+msgid "XIAFS Volume"
+msgstr "Zväzok XIAFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:93
+msgid "CIFS Volume"
+msgstr "Zväzok CIFS"
+
+#: ../libgnomevfs/gnome-vfs-filesystem-type.c:121
+msgid "Unknown"
+msgstr "Neznámy"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:356
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:582
+#, c-format
+msgid "%s Volume"
+msgstr "Zväzok %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:372
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:565
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:623
+msgid "CD-ROM"
+msgstr "CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:374
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:567
+msgid "CD-R"
+msgstr "CD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:376
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:568
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:380
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:569
+msgid "DVD-ROM"
+msgstr "DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:382
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:384
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:386
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:571
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:388
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:572
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:390
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:570
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:393
+msgid "DVD±R"
+msgstr "DVD±R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:396
+msgid "DVD±RW"
+msgstr "DVD±RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:399
+#, c-format
+msgid "%s/%s Drive"
+msgstr "Mechanika %s/%s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:401
+#, c-format
+msgid "%s Drive"
+msgstr "Mechanika %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:406
+msgid "Floppy Drive"
+msgstr "Disketová mechanika"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:409
+msgid "Compact Flash Drive"
+msgstr "Mechanika Compact Flash"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:411
+msgid "Memory Stick Drive"
+msgstr "Mechanika Memory Stick"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:413
+msgid "Smart Media Drive"
+msgstr "Mechanika Smart Media"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:415
+msgid "SD/MMC Drive"
+msgstr "Mechanika SD/MMC"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:417
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:594
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:626
+msgid "Zip Drive"
+msgstr "Mechanika Zip"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:420
+msgid "Jaz Drive"
+msgstr "Mechanika Jaz"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:423
+msgid "Pen Drive"
+msgstr "Mechanika Pen"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:429
+#, c-format
+msgid "%s %s Music Player"
+msgstr "Prehrávač hudby %s %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:437
+#, c-format
+msgid "%s %s Digital Camera"
+msgstr "Digitálny fotoaparát %s %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:467
+msgid "Drive"
+msgstr "Mechanika"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:472
+#, c-format
+msgid "External %s"
+msgstr "Externá %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:508
+msgid "CD-ROM Disc"
+msgstr "Disk CD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:513
+msgid "Blank CD-R Disc"
+msgstr "Čistý disk CD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:515
+msgid "CD-R Disc"
+msgstr "Disk CD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:520
+msgid "Blank CD-RW Disc"
+msgstr "Čistý disk CD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:522
+msgid "CD-RW Disc"
+msgstr "Disk CD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:526
+msgid "DVD-ROM Disc"
+msgstr "Disk DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:531
+msgid "Blank DVD-RAM Disc"
+msgstr "Čistý disk DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:533
+msgid "DVD-RAM Disc"
+msgstr "Disk DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:538
+msgid "Blank DVD-R Disc"
+msgstr "Čistý disk DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:540
+msgid "DVD-R Disc"
+msgstr "Disk DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:545
+msgid "Blank DVD-RW Disc"
+msgstr "Čistý disk DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:547
+msgid "DVD-RW Disc"
+msgstr "Disk DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:553
+msgid "Blank DVD+R Disc"
+msgstr "Čistý disk DVD+R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:555
+msgid "DVD+R Disc"
+msgstr "Disk DVD+R"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:560
+msgid "Blank DVD+RW Disc"
+msgstr "Čistý disk DVD+RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:562
+msgid "DVD+RW Disc"
+msgstr "Disk DVD+RW"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:569
+msgid "Audio Disc"
+msgstr "Zvukový disk"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:580
+#, c-format
+msgid "%s Removable Volume"
+msgstr "Výmenný zväzok %s"
+
+#: ../libgnomevfs/gnome-vfs-hal-mounts.c:591
+msgid "Volume"
+msgstr "Zväzok"
+
+#: ../libgnomevfs/gnome-vfs-job.c:733
+#, c-format
+msgid "Unknown operation type %u"
+msgstr "Neznámy typ operácie %u"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1024 ../libgnomevfs/gnome-vfs-job.c:1175
+#, c-format
+msgid "Cannot create pipe for open GIOChannel: %s"
+msgstr "Nemožno vytvoriť rúru pre otvorenie GIOChannel: %s"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1691
+#, c-format
+msgid "Unknown job kind %u"
+msgstr "Neznámy druh úlohy %u"
+
+#: ../libgnomevfs/gnome-vfs-job.c:1724
+msgid "Operation stopped"
+msgstr "Operácia zastavená"
+
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:103
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:231
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:282
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:365
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:386
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:406
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:427
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:448
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:541
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:565
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:586
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:607
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:628
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:647
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:666
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:686
+#: ../libgnomevfs/gnome-vfs-mime-handlers.c:706
+#: ../libgnomevfs/gnome-vfs-mime-info.c:631
+#: ../libgnomevfs/gnome-vfs-mime-info.c:638
+#: ../libgnomevfs/gnome-vfs-mime-info.c:646
+#: ../libgnomevfs/gnome-vfs-mime-info.c:653
+#: ../libgnomevfs/gnome-vfs-mime-info.c:661
+#: ../libgnomevfs/gnome-vfs-mime-info.c:678
+#: ../libgnomevfs/gnome-vfs-mime-info.c:685
+#: ../libgnomevfs/gnome-vfs-mime-info.c:692
+#: ../libgnomevfs/gnome-vfs-mime-info.c:699
+#: ../libgnomevfs/gnome-vfs-mime-info.c:707
+#: ../libgnomevfs/gnome-vfs-mime-info.c:714
+msgid ""
+"Deprecated function.  User modifications to the MIME database are no longer "
+"supported."
+msgstr ""
+"Zastaralá funkcia.  Používateľské zmeny MIME databázy už nie sú podporované."
+
+#: ../libgnomevfs/gnome-vfs-parse-ls.c:713
+#, c-format
+msgid "Could not parse: %s"
+msgstr "Nepodarilo sa analyzovať: %s"
+
+#: ../libgnomevfs/gnome-vfs-parse-ls.c:715
+msgid "More parsing errors will be ignored."
+msgstr "Ďalšie chyby analýzy budú ignorované."
+
+#. GNOME_VFS_OK
+#: ../libgnomevfs/gnome-vfs-result.c:47
+msgid "No error"
+msgstr "Bez chyby"
+
+#. GNOME_VFS_ERROR_NOT_FOUND
+#: ../libgnomevfs/gnome-vfs-result.c:48
+msgid "File not found"
+msgstr "Súbor nenájdený"
+
+#. GNOME_VFS_ERROR_GENERIC
+#: ../libgnomevfs/gnome-vfs-result.c:49
+msgid "Generic error"
+msgstr "Všeobecná chyba"
+
+#. GNOME_VFS_ERROR_INTERNAL
+#: ../libgnomevfs/gnome-vfs-result.c:50
+msgid "Internal error"
+msgstr "Interná chyba"
+
+#. GNOME_VFS_ERROR_BAD_PARAMETERS
+#: ../libgnomevfs/gnome-vfs-result.c:51
+msgid "Invalid parameters"
+msgstr "Neplatné parametre"
+
+#. GNOME_VFS_ERROR_NOT_SUPPORTED
+#: ../libgnomevfs/gnome-vfs-result.c:52
+msgid "Unsupported operation"
+msgstr "Nepodporovaná operácia"
+
+#. GNOME_VFS_ERROR_IO
+#: ../libgnomevfs/gnome-vfs-result.c:53
+msgid "I/O error"
+msgstr "V/V chyba"
+
+#. GNOME_VFS_ERROR_CORRUPTED_DATA
+#: ../libgnomevfs/gnome-vfs-result.c:54
+msgid "Data corrupted"
+msgstr "Poškodené dáta"
+
+#. GNOME_VFS_ERROR_WRONG_FORMAT
+#: ../libgnomevfs/gnome-vfs-result.c:55
+msgid "Format not valid"
+msgstr "Neplatný formát"
+
+#. GNOME_VFS_ERROR_BAD_FILE
+#: ../libgnomevfs/gnome-vfs-result.c:56
+msgid "Bad file handle"
+msgstr "Chybný handle súboru"
+
+#. GNOME_VFS_ERROR_TOO_BIG
+#: ../libgnomevfs/gnome-vfs-result.c:57
+msgid "File too big"
+msgstr "Príliš veľký súbor"
+
+#. GNOME_VFS_ERROR_NO_SPACE
+#: ../libgnomevfs/gnome-vfs-result.c:58
+msgid "No space left on device"
+msgstr "Nedostatok miesta na zariadení"
+
+#. GNOME_VFS_ERROR_READ_ONLY
+#: ../libgnomevfs/gnome-vfs-result.c:59
+msgid "Read-only file system"
+msgstr "Súborový systém len pre čítanie"
+
+#. GNOME_VFS_ERROR_INVALID_URI
+#: ../libgnomevfs/gnome-vfs-result.c:60
+msgid "Invalid URI"
+msgstr "Neplatné URI"
+
+#. GNOME_VFS_ERROR_NOT_OPEN
+#: ../libgnomevfs/gnome-vfs-result.c:61
+msgid "File not open"
+msgstr "Neotvorený súbor"
+
+#. GNOME_VFS_ERROR_INVALID_OPEN_MODE
+#: ../libgnomevfs/gnome-vfs-result.c:62
+msgid "Open mode not valid"
+msgstr "Mód otvorenia neplatný"
+
+#. GNOME_VFS_ERROR_ACCESS_DENIED
+#: ../libgnomevfs/gnome-vfs-result.c:63
+msgid "Access denied"
+msgstr "Prístup odmietnutý"
+
+#. GNOME_VFS_ERROR_TOO_MANY_OPEN_FILES
+#: ../libgnomevfs/gnome-vfs-result.c:64
+msgid "Too many open files"
+msgstr "Príliš veľa otvorených súborov"
+
+#. GNOME_VFS_ERROR_EOF
+#: ../libgnomevfs/gnome-vfs-result.c:65
+msgid "End of file"
+msgstr "Koniec súboru"
+
+#. GNOME_VFS_ERROR_NOT_A_DIRECTORY
+#: ../libgnomevfs/gnome-vfs-result.c:66
+msgid "Not a directory"
+msgstr "Nie je priečinok"
+
+#. GNOME_VFS_ERROR_IN_PROGRESS
+#: ../libgnomevfs/gnome-vfs-result.c:67
+msgid "Operation in progress"
+msgstr "Operácia prebieha"
+
+#. GNOME_VFS_ERROR_INTERRUPTED
+#: ../libgnomevfs/gnome-vfs-result.c:68
+msgid "Operation interrupted"
+msgstr "Operácia prerušená"
+
+#. GNOME_VFS_ERROR_FILE_EXISTS
+#: ../libgnomevfs/gnome-vfs-result.c:69
+msgid "File exists"
+msgstr "Súbor existuje"
+
+#. GNOME_VFS_ERROR_LOOP
+#: ../libgnomevfs/gnome-vfs-result.c:70
+msgid "Looping links encountered"
+msgstr "Vyskytli sa cyklické odkazy"
+
+#. GNOME_VFS_ERROR_NOT_PERMITTED
+#: ../libgnomevfs/gnome-vfs-result.c:71
+msgid "Operation not permitted"
+msgstr "Nedovolená operácia"
+
+#. GNOME_VFS_ERROR_IS_DIRECTORY
+#: ../libgnomevfs/gnome-vfs-result.c:72
+msgid "Is a directory"
+msgstr "Je priečinok"
+
+#. GNOME_VFS_ERROR_NO_MEMORY
+#: ../libgnomevfs/gnome-vfs-result.c:73
+msgid "Not enough memory"
+msgstr "Nedostatok pamäti"
+
+#. GNOME_VFS_ERROR_HOST_NOT_FOUND
+#: ../libgnomevfs/gnome-vfs-result.c:74
+msgid "Host not found"
+msgstr "Hostiteľ nenájdený"
+
+#. GNOME_VFS_ERROR_INVALID_HOST_NAME
+#: ../libgnomevfs/gnome-vfs-result.c:75
+msgid "Host name not valid"
+msgstr "Neplatné meno hostiteľa"
+
+#. GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS
+#: ../libgnomevfs/gnome-vfs-result.c:76
+msgid "Host has no address"
+msgstr "Hostiteľ nemá adresu"
+
+#. GNOME_VFS_ERROR_LOGIN_FAILED
+#: ../libgnomevfs/gnome-vfs-result.c:77
+msgid "Login failed"
+msgstr "Zlyhalo prihlásenie"
+
+#. GNOME_VFS_ERROR_CANCELLED
+#: ../libgnomevfs/gnome-vfs-result.c:78
+msgid "Operation cancelled"
+msgstr "Operácia zrušená"
+
+#. GNOME_VFS_ERROR_DIRECTORY_BUSY
+#: ../libgnomevfs/gnome-vfs-result.c:79
+msgid "Directory busy"
+msgstr "Priečinok zaneprázdnený"
+
+#. GNOME_VFS_ERROR_DIRECTORY_NOT_EMPTY
+#: ../libgnomevfs/gnome-vfs-result.c:80
+msgid "Directory not empty"
+msgstr "Priečinok nie je prázdny"
+
+#. GNOME_VFS_ERROR_TOO_MANY_LINKS
+#: ../libgnomevfs/gnome-vfs-result.c:81
+msgid "Too many links"
+msgstr "Príliš veľa odkazov"
+
+#. GNOME_VFS_ERROR_READ_ONLY_FILE_SYSTEM
+#: ../libgnomevfs/gnome-vfs-result.c:82
+msgid "Read only file system"
+msgstr "Súborový systém len pre čítanie"
+
+#. GNOME_VFS_ERROR_NOT_SAME_FILE_SYSTEM
+#: ../libgnomevfs/gnome-vfs-result.c:83
+msgid "Not on the same file system"
+msgstr "Nie je na rovnakom súborovom systéme"
+
+#. GNOME_VFS_ERROR_NAME_TOO_LONG
+#: ../libgnomevfs/gnome-vfs-result.c:84
+msgid "Name too long"
+msgstr "Názov príliš dlhý"
+
+#. GNOME_VFS_ERROR_SERVICE_NOT_AVAILABLE
+#: ../libgnomevfs/gnome-vfs-result.c:85
+msgid "Service not available"
+msgstr "Služba nie je k dispozícii"
+
+#. GNOME_VFS_ERROR_SERVICE_OBSOLETE
+#: ../libgnomevfs/gnome-vfs-result.c:86
+msgid "Request obsoletes service's data"
+msgstr "Požiadavka zneplatňuje dáta služby"
+
+#. GNOME_VFS_ERROR_PROTOCOL_ERROR
+#: ../libgnomevfs/gnome-vfs-result.c:87
+msgid "Protocol error"
+msgstr "Chyba protokolu"
+
+#. GNOME_VFS_ERROR_NO_MASTER_BROWSER
+#: ../libgnomevfs/gnome-vfs-result.c:88
+msgid "Could not find master browser"
+msgstr "Nepodarilo sa nájsť hlavný prehliadač"
+
+#. GNOME_VFS_ERROR_NO_DEFAULT
+#: ../libgnomevfs/gnome-vfs-result.c:89
+msgid "No default action associated"
+msgstr "Nedefinovaná žiadna štandardná akcia"
+
+#. GNOME_VFS_ERROR_NO_HANDLER
+#: ../libgnomevfs/gnome-vfs-result.c:90
+msgid "No handler for URL scheme"
+msgstr "Pre URL schému nie je ovládací program"
+
+#. GNOME_VFS_ERROR_PARSE
+#: ../libgnomevfs/gnome-vfs-result.c:91
+msgid "Error parsing command line"
+msgstr "Chyba pri analýze príkazového riadku"
+
+#. GNOME_VFS_ERROR_LAUNCH
+#: ../libgnomevfs/gnome-vfs-result.c:92
+msgid "Error launching command"
+msgstr "Chyba pri spúšťaní príkazu"
+
+#. GNOME_VFS_ERROR_TIMEOUT
+#: ../libgnomevfs/gnome-vfs-result.c:93
+msgid "Timeout reached"
+msgstr "Čas vypršal"
+
+#. GNOME_VFS_ERROR_NAMESERVER
+#: ../libgnomevfs/gnome-vfs-result.c:94
+msgid "Nameserver error"
+msgstr "Chyba menného servera"
+
+#. GNOME_VFS_ERROR_LOCKED
+#: ../libgnomevfs/gnome-vfs-result.c:95
+msgid "The resource is locked"
+msgstr "Prostriedok je uzamknutý"
+
+#. GNOME_VFS_ERROR_DEPRECATED_FUNCTION
+#: ../libgnomevfs/gnome-vfs-result.c:96
+msgid "Function call deprecated"
+msgstr "Volanie funkcie je zastaralá"
+
+#. GNOME_VFS_ERROR_INVALID_FILENAME
+#: ../libgnomevfs/gnome-vfs-result.c:97
+msgid "Invalid filename"
+msgstr "Neplatný názov súboru"
+
+#. GNOME_VFS_ERROR_NOT_A_SYMBOLIC_LINK
+#: ../libgnomevfs/gnome-vfs-result.c:98
+msgid "Not a symbolic link"
+msgstr "Nie je symbolický odkaz"
+
+#: ../libgnomevfs/gnome-vfs-result.c:225
+msgid "Unknown error"
+msgstr "Neznáma chyba"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:78
+#, c-format
+msgid "%u byte"
+msgid_plural "%u bytes"
+msgstr[0] "%u bajtov"
+msgstr[1] "%u bajt"
+msgstr[2] "%u bajty"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:84
+#, c-format
+msgid "%.1f KB"
+msgstr "%.1f KB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:88
+#, c-format
+msgid "%.1f MB"
+msgstr "%.1f MB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:92
+#, c-format
+msgid "%.1f GB"
+msgstr "%.1f GB"
+
+#: ../libgnomevfs/gnome-vfs-utils.c:1108
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:382
+msgid " (invalid Unicode)"
+msgstr " (neplatný kód Unicode)"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:564
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:620
+msgid "Floppy"
+msgstr "Disketa"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:573
+msgid "CD-ROM/DVD-ROM"
+msgstr "CD-ROM/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:574
+msgid "CD-ROM/DVD-RAM"
+msgstr "CD-ROM/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:575
+msgid "CD-ROM/DVD-R"
+msgstr "CD-ROM/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:576
+msgid "CD-ROM/DVD-RW"
+msgstr "CD-ROM/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:577
+msgid "CD-R/DVD-ROM"
+msgstr "CD-R/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:578
+msgid "CD-R/DVD-RAM"
+msgstr "CD-R/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:579
+msgid "CD-R/DVD-R"
+msgstr "CD-R/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:580
+msgid "CD-R/DVD-RW"
+msgstr "CD-R/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:581
+msgid "CD-RW/DVD-ROM"
+msgstr "CD-RW/DVD-ROM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:582
+msgid "CD-RW/DVD-RAM"
+msgstr "CD-RW/DVD-RAM"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:583
+msgid "CD-RW/DVD-R"
+msgstr "CD-RW/DVD-R"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:584
+msgid "CD-RW/DVD-RW"
+msgstr "CD-RW/DVD-RW"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:586
+msgid "Disk"
+msgstr "Disk"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:587
+msgid "USB Drive"
+msgstr "Mechanika USB"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:588
+msgid "IEEE1394 Drive"
+msgstr "Mechanika IEEE1394"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:589
+msgid "CF"
+msgstr "CF"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:590
+msgid "SD/MMC"
+msgstr "SD/MMC"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:591
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:595
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:592
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:596
+msgid "Camera"
+msgstr "Fotoaparát"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:597
+msgid "DVD"
+msgstr "DVD"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:849
+msgid "Root Volume"
+msgstr "Koreňový zväzok"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:930
+msgid "Audio CD"
+msgstr "Zvukové CD"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:963
+msgid "Unknown volume"
+msgstr "Neznámy zväzok"
+
+#: ../libgnomevfs/gnome-vfs-volume-monitor-daemon.c:1175
+msgid "Network server"
+msgstr "Sieťový server"
+
+#. Handle floppy case
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:184
+#, c-format
+msgid ""
+"Unable to mount the floppy drive. There is probably no floppy in the drive."
+msgstr "Nepodarilo sa pripojiť disketu. Možno v mechanike žiadna nie je."
+
+#. All others
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:188
+#, c-format
+msgid "Unable to mount the volume. There is probably no media in the device."
+msgstr "Nepodarilo sa pripojiť zväzok. Možno v mechanike nie je médium."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:194
+#, c-format
+msgid ""
+"Unable to mount the floppy drive. The floppy is probably in a format that "
+"cannot be mounted."
+msgstr ""
+"Nepodarilo sa pripojiť disketu. Disketa asi nie je v podporovanom formáte."
+
+#. Probably a wrong password
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:198
+#, c-format
+msgid ""
+"Unable to mount the volume. If this is an encrypted drive, then the wrong "
+"password or key was used."
+msgstr ""
+"Nepodarilo sa pripojiť zväzok. Ak je tento zväzok zašifrovaný, bolo použité "
+"nesprávne heslo alebo kľúč."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:201
+#, c-format
+msgid ""
+"Unable to mount the selected volume. The volume is probably in a format that "
+"cannot be mounted."
+msgstr ""
+"Nepodarilo sa pripojiť zadaný zväzok. Zväzok asi nie je v podporovanom "
+"formáte."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:206
+msgid "Unable to mount the selected floppy drive."
+msgstr "Nepodarilo sa pripojiť zadanú disketu."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:208
+msgid "Unable to mount the selected volume."
+msgstr "Nepodarilo sa pripojiť zadaný disk."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:221
+#, c-format
+msgid ""
+"Unable to unmount the selected volume. The volume is in use by one or more "
+"programs."
+msgstr ""
+"Nepodarilo sa odpojiť zadaný zväzok. Zväzok je používaný jedným alebo "
+"viacerými programami."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:224
+msgid "Unable to unmount the selected volume."
+msgstr "Nepodarilo sa odpojiť zadaný zväzok."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:377
+#, c-format
+msgid "Failed to read data from child process %d (%s)"
+msgstr "Čítanie údajov z procesu potomka %d zlyhalo (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:421
+msgid "Couldn't run mount process in a pty"
+msgstr "Proces mount nemohol byť spustený v pty"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:466
+#, c-format
+msgid "Unexpected error in select() reading data from a child process (%s)"
+msgstr "Neočakávaná chyba v select() pri čítaní údajov z procesu potomka (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:520
+#, c-format
+msgid "Couldn't send password to mount process."
+msgstr "Nepodarilo sa poslať heslo do procesu mount."
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:559
+#, c-format
+msgid "Unexpected error in waitpid() (%s)"
+msgstr "Neočakávaná chyba vo waitpid() (%s)"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:669
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:755
+msgid "Failed to start command"
+msgstr "Nepodarilo sa spustiť príkaz"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:742
+msgid "Unable to eject media"
+msgstr "Nepodarilo sa vysunúť médium"
+
+#: ../libgnomevfs/gnome-vfs-volume-ops.c:983
+msgid "Unable to unmount connected server"
+msgstr "Nepodarilo sa odpojiť pripojený server"
+
+#: ../modules/computer-method.c:543
+msgid "Network"
+msgstr "Sieť"
+
+#: ../modules/computer-method.c:561
+msgid "Home"
+msgstr "Domovský priečinok"
+
+#: ../modules/computer-method.c:579
+msgid "Filesystem"
+msgstr "Systém súborov"
+
+#: ../modules/file-method.c:497
+#, c-format
+msgid "Unknown GnomeVFSSeekPosition %d"
+msgstr "Neznáma GnomeVFSSeekPosition %d"
+
+#: ../modules/network-method.c:1399
+msgid "Windows Network"
+msgstr "Sieť Windows"
+
+#: ../modules/sftp-method.c:1424
+#, c-format
+msgid "The identity of the remote computer (%s) is unknown."
+msgstr "Totožnosť vzdialeného počítača (%s) je neznáma."
+
+#: ../modules/sftp-method.c:1425
+#, c-format
+msgid ""
+"This happens when you log in to a computer the first time.\n"
+"\n"
+"The identity sent by the remote computer is %s. If you want to be absolutely "
+"sure it is safe to continue, contact the system administrator."
+msgstr ""
+"Toto sa stane pri prvom prihlásení k počítaču.\n"
+"\n"
+"Totožnosť odoslaná vzdialeným počítačom je %s. Ak chcete mať absolútnu "
+"istotu, že je bezpečné pokračovať, kontaktujte správcu systému."
+
+#: ../modules/sftp-method.c:1433
+msgid "Log In Anyway"
+msgstr "Aj tak sa prihlásiť"
+
+#: ../modules/sftp-method.c:1434
+msgid "Cancel Login"
+msgstr "Zrušiť prihlásenie"
+
+#. FIXME: we probably shouldn't use printf to output the message
+#: ../modules/test-method.c:587
+#, c-format
+msgid "Didn't find a valid settings file at %s\n"
+msgstr "Nepodarilo sa nájsť platný súbor s nastavením v %s\n"
+
+#: ../modules/test-method.c:589
+#, c-format
+msgid "Use the %s environment variable to specify a different location.\n"
+msgstr "Pre zadanie iného umiestnenia použite premennú prostredia %s.\n"
+
+#: ../programs/authentication.c:106
+#, c-format
+msgid "Your HTTP Proxy requires you to log in.\n"
+msgstr "Vaše HTTP proxy vyžaduje vaše prihlásenie.\n"
+
+#: ../programs/authentication.c:107
+#, c-format
+msgid ""
+"You must log in to access \"%s\".\n"
+"%s"
+msgstr ""
+"Aby ste mohli pristupovať k \"%s\", musíte sa prihlásiť.\n"
+"%s"
+
+#: ../programs/authentication.c:110
+msgid "Your password will be transmitted unencrypted."
+msgstr "Vaše heslo bude prenesené nezašifrované."
+
+#: ../programs/authentication.c:111
+msgid "Your password will be transmitted encrypted."
+msgstr "Vaše heslo bude prenesené zašifrované."
+
+#: ../programs/authentication.c:163
+#, c-format
+msgid "You must log in to access %s domain %s\n"
+msgstr "Aby ste mohli pristupovať k %s domény %s, musíte sa prihlásiť\n"
+
+#: ../programs/authentication.c:165
+#, c-format
+msgid "You must log in to access %s\n"
+msgstr "Aby ste mohli pristupovať k %s, musíte sa prihlásiť\n"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:1
+msgid "Default component viewer application"
+msgstr "Štandardná aplikácia prehliadača súčastí"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:2
+msgid "Default terminal application"
+msgstr "Štandardná aplikácia terminálu"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:3
+msgid "Exec argument for default terminal"
+msgstr "Argument spustenia pre štandardný terminál"
+
+#: ../schemas/desktop_default_applications.schemas.in.h:5
+#, no-c-format
+msgid ""
+"The application to use for viewing files that require a component to view "
+"them. The parameter %s will be replaced by the file's URIs, the parameter %c "
+"will be replaced by the component IID."
+msgstr ""
+"Aplikácia používaná pre zobrazenie súborov, ktoré vyžadujú nejakú súčasť pre "
+"zobrazenie. Parameter %s bude nahradený URI súborov, parameter %c bude "
+"nahradený IID súčasti."
+
+#: ../schemas/desktop_default_applications.schemas.in.h:6
+msgid ""
+"The default terminal application to use for applications that require a "
+"terminal."
+msgstr ""
+"Štandardná aplikácia terminálu používaná pre aplikácie, ktoré vyžadujú "
+"terminál."
+
+#: ../schemas/desktop_default_applications.schemas.in.h:7
+msgid "The exec argument to use for the default terminal application."
+msgstr "Parameter používaný pri spúšťaní štandardnej aplikácie terminálu."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:1
+msgid "Run the command in a terminal"
+msgstr "Spustiť program v termináli"
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:2
+msgid "The command used to handle \"aim\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"aim\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:3
+msgid "The command used to handle \"callto\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"callto\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:4
+msgid "The command used to handle \"ghelp\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"ghelp\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:5
+msgid "The command used to handle \"h323\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"h323\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:6
+msgid "The command used to handle \"http\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"http\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:7
+msgid "The command used to handle \"https\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"https\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:8
+msgid "The command used to handle \"info\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"info\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:9
+msgid "The command used to handle \"mailto\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"mailto\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:10
+msgid "The command used to handle \"man\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"man\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:11
+msgid "The command used to handle \"trash\" URLs, if enabled."
+msgstr "Príkaz použitý na obsluhovanie URL \"trash\", ak je povolené."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:12
+msgid "The handler for \"aim\" URLs"
+msgstr "Obslužný program pre URL \"aim\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:13
+msgid "The handler for \"callto\" URLs"
+msgstr "Obslužný program pre URL \"callto\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:14
+msgid "The handler for \"ghelp\" URLs"
+msgstr "Obslužný program pre URL \"ghelp\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:15
+msgid "The handler for \"h323\" URLs"
+msgstr "Obslužný program pre URL \"h323\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:16
+msgid "The handler for \"http\" URLs"
+msgstr "Obslužný program pre URL \"http\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:17
+msgid "The handler for \"https\" URLs"
+msgstr "Obslužný program pre URL \"https\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:18
+msgid "The handler for \"info\" URLs"
+msgstr "Obslužný program pre URL \"info\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:19
+msgid "The handler for \"mailto\" URLs"
+msgstr "Obslužný program pre URL \"mailto\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:20
+msgid "The handler for \"man\" URLs"
+msgstr "Obslužný program pre URL \"man\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:21
+msgid "The handler for \"trash\" URLs"
+msgstr "Obslužný program pre URL \"trash\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:22
+msgid ""
+"True if the command specified in the \"command\" key should handle \"aim\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"aim\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:23
+msgid ""
+"True if the command specified in the \"command\" key should handle \"callto"
+"\" URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"callto\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:24
+msgid ""
+"True if the command specified in the \"command\" key should handle \"ghelp\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"ghelp\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:25
+msgid ""
+"True if the command specified in the \"command\" key should handle \"h323\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"h323\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:26
+msgid ""
+"True if the command specified in the \"command\" key should handle \"http\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"http\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:27
+msgid ""
+"True if the command specified in the \"command\" key should handle \"https\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"https\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:28
+msgid ""
+"True if the command specified in the \"command\" key should handle \"info\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"info\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:29
+msgid ""
+"True if the command specified in the \"command\" key should handle \"mailto"
+"\" URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"mailto\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:30
+msgid ""
+"True if the command specified in the \"command\" key should handle \"man\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"man\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:31
+msgid ""
+"True if the command specified in the \"command\" key should handle \"trash\" "
+"URLs."
+msgstr ""
+"True, ak program zadaný v kľúči \"command\" by mal obsluhovať URL \"trash\"."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:32
+msgid ""
+"True if the command used to handle this type of URL should be run in a "
+"terminal."
+msgstr ""
+"True, ak má byť program, použitý na obsluhu tohoto typu URL, spustený v "
+"termináli."
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:33
+msgid "Whether the specified command should handle \"aim\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"aim\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:34
+msgid "Whether the specified command should handle \"callto\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"callto\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:35
+msgid "Whether the specified command should handle \"ghelp\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"ghelp\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:36
+msgid "Whether the specified command should handle \"h323\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"h323\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:37
+msgid "Whether the specified command should handle \"http\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"http\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:38
+msgid "Whether the specified command should handle \"https\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"https\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:39
+msgid "Whether the specified command should handle \"info\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"info\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:40
+msgid "Whether the specified command should handle \"mailto\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"mailto\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:41
+msgid "Whether the specified command should handle \"man\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"man\""
+
+#: ../schemas/desktop_gnome_url_handlers.schemas.in.h:42
+msgid "Whether the specified command should handle \"trash\" URLs"
+msgstr "Či má zadaný príkaz obsuhovať URL \"trash\""
+
+#: ../schemas/system_dns_sd.schemas.in.h:1
+msgid ""
+"Comma separated list of DNS-SD domains that should be visible in the "
+"\"network:///\" location."
+msgstr ""
+"Čiarkou oddelený zoznam DNS-SD domén, ktoré majú byť viditeľné v umiestnení "
+"\"network:///\"."
+
+#: ../schemas/system_dns_sd.schemas.in.h:2
+msgid "Extra domains to look for DNS-SD services in"
+msgstr "Ďalšie domény, v ktorých sa majú hľadať služby DNS-SD"
+
+#: ../schemas/system_dns_sd.schemas.in.h:3
+msgid "How to display local DNS-SD service"
+msgstr "Ako sa má zobraziť miestna služba DNS-SD"
+
+#: ../schemas/system_dns_sd.schemas.in.h:4
+msgid "Possible values are \"merged\", \"separate\" and \"disabled\"."
+msgstr "Prípustné hodnoty sú \"merged\", \"separate\" a \"disabled\"."
+
+#: ../schemas/system_http_proxy.schemas.in.h:1
+msgid "Authenticate proxy server connections"
+msgstr "Overovať totožnosť spojení s proxy serverom"
+
+#: ../schemas/system_http_proxy.schemas.in.h:2
+msgid "Automatic proxy configuration URL"
+msgstr "URL pre automatické nastavenie proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:3
+msgid "Enables the proxy settings when accessing HTTP over the Internet."
+msgstr "Povolí nastavenie proxy pri prístupe pomocou HTTP na Internet."
+
+#: ../schemas/system_http_proxy.schemas.in.h:4
+msgid "FTP proxy host name"
+msgstr "Hostiteľ pre FTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:5
+msgid "FTP proxy port"
+msgstr "Port pre FTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:6
+msgid "HTTP proxy host name"
+msgstr "Hostiteľ pre HTTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:7
+msgid "HTTP proxy password"
+msgstr "Heslo pre HTTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:8
+msgid "HTTP proxy port"
+msgstr "Port pre HTTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:9
+msgid "HTTP proxy username"
+msgstr "Meno používateľa pre HTTP proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:10
+msgid ""
+"If true, then connections to the proxy server require authentication. The "
+"username/password combo is defined by \"/system/http_proxy/"
+"authentication_user\" and \"/system/http_proxy/authentication_password\"."
+msgstr ""
+"Ak je true, pripojenia k proxy serveru vyžadujú overenie totožnosti. "
+"Kombinácia používateľ/heslo je definovaná v \"/system/http_proxy/"
+"authentication_user\" a \"/system/http_proxy/authentication_password\"."
+
+#: ../schemas/system_http_proxy.schemas.in.h:11
+msgid "Non-proxy hosts"
+msgstr "Hostitelia bez použitia proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:12
+msgid "Password to pass as authentication when doing HTTP proxying."
+msgstr "Heslo používané pre prihlásenie k proxy HTTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:13
+msgid "Proxy configuration mode"
+msgstr "Režim nastavenia proxy"
+
+#: ../schemas/system_http_proxy.schemas.in.h:14
+msgid "SOCKS proxy host name"
+msgstr "Hostiteľ proxy pre SOCKS"
+
+#: ../schemas/system_http_proxy.schemas.in.h:15
+msgid "SOCKS proxy port"
+msgstr "Port proxy pre SOCKS"
+
+#: ../schemas/system_http_proxy.schemas.in.h:16
+msgid "Secure HTTP proxy host name"
+msgstr "Hostiteľ proxy pre zabezpečené HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:17
+msgid "Secure HTTP proxy port"
+msgstr "Port proxy pre zabezpečené HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:18
+msgid ""
+"Select the proxy configuration mode. Supported values are \"none\", \"manual"
+"\", \"auto\"."
+msgstr ""
+"Výber režimu nastavenia proxy. Podporované hodnoty sú \"none\", \"manual\", "
+"\"auto\"."
+
+#: ../schemas/system_http_proxy.schemas.in.h:19
+msgid "The machine name to proxy FTP through."
+msgstr "Názov počítača, ktorý používať ako proxy pre FTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:20
+msgid "The machine name to proxy HTTP through."
+msgstr "Názov počítača, ktorý používať ako proxy pre HTTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:21
+msgid "The machine name to proxy secure HTTP through."
+msgstr "Názov počítača, ktorý používať ako proxy pre zabezpečené HTTP."
+
+#: ../schemas/system_http_proxy.schemas.in.h:22
+msgid "The machine name to proxy socks through."
+msgstr "Názov počítača, ktorý používať ako proxy pre socks."
+
+#: ../schemas/system_http_proxy.schemas.in.h:23
+msgid ""
+"The port on the machine defined by \"/system/http_proxy/host\" that you "
+"proxy through."
+msgstr ""
+"Port počítača definovaného v \"/system/http_proxy/host\", ktorý používate "
+"ako proxy."
+
+#: ../schemas/system_http_proxy.schemas.in.h:24
+msgid ""
+"The port on the machine defined by \"/system/proxy/ftp_host\" that you proxy "
+"through."
+msgstr ""
+"Port počítača definovaného v \"/system/proxy/ftp_host\", ktorý používate ako "
+"proxy."
+
+#: ../schemas/system_http_proxy.schemas.in.h:25
+msgid ""
+"The port on the machine defined by \"/system/proxy/secure_host\" that you "
+"proxy through."
+msgstr ""
+"Port počítača definovaného v \"/system/proxy/secure_host\", ktorý používate "
+"ako proxy."
+
+#: ../schemas/system_http_proxy.schemas.in.h:26
+msgid ""
+"The port on the machine defined by \"/system/proxy/socks_host\" that you "
+"proxy through."
+msgstr ""
+"Port počítača definovaného v \"/system/proxy/socks_host\", ktorý používate "
+"ako proxy."
+
+#: ../schemas/system_http_proxy.schemas.in.h:27
+msgid ""
+"This key contains a list of hosts which are connected to directly, rather "
+"than via the proxy (if it is active). The values can be hostnames, domains "
+"(using an initial wildcard like *.foo.com), IP host addresses (both IPv4 and "
+"IPv6) and network addresses with a netmask (something like 192.168.0.0/24)."
+msgstr ""
+"Tento kľúč obsahuje zoznam hostiteľov, ku ktorým sa radšej pripojiť priamo a "
+"nie cez proxy (ak je atívne). Hodnoty môžu byť názvy hostiteľov, domény "
+"(pomocou počiatočných žolíkov, napr. *.foo.com), IP adresy (IPv4 aj IPv6) a "
+"sieťové adresy s maskou (napr. 192.168.0.0/24)."
+
+#: ../schemas/system_http_proxy.schemas.in.h:28
+msgid "URL that provides proxy configuration values."
+msgstr "URL, ktoré poskytuje hodnoty konfigurácie proxy."
+
+#: ../schemas/system_http_proxy.schemas.in.h:29
+msgid "Use HTTP proxy"
+msgstr "Použiť proxy HTTP"
+
+#: ../schemas/system_http_proxy.schemas.in.h:30
+msgid "User name to pass as authentication when doing HTTP proxying."
+msgstr "Používateľ poskytnutý pri overení totožnosti počas proxy HTTP."
+
+#: ../schemas/system_smb.schemas.in.h:1
+msgid "SMB workgroup"
+msgstr "Pracovná skupina SMB"
+
+#: ../schemas/system_smb.schemas.in.h:2
+msgid ""
+"The Windows networking workgroup or domain that the user is part of. In "
+"order for a new workgroup to fully take effect the user may need to log out "
+"and log back in."
+msgstr ""
+"Sieťová pracovná skupina alebo doména Windows, do ktorej patrí používateľ. "
+"Aby sa nová pracovná skupina úplne prejavila, použivateľ sa možno bude "
+"musieť odhlásiť a prihlásiť."
